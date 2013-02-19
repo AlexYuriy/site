@@ -1,0 +1,122 @@
+body  	{ 	
+		background: #232323 url(images/bg.png) repeat;
+		margin: 0;
+		padding: 0;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+		
+		/* Make HTML 5 elements display block-level for consistent styling */  
+
+header, nav, article, section, aside, footer, address 	
+	{  
+    		display: block;  
+	} 
+
+
+.wrapper 
+	{
+		text-align: center;
+		margin: 0 auto;
+		max-width: 960px;
+		min-width: 600px;
+		min-height: 600px;
+		background: url(images/bg-light.png) no-repeat;
+		background-size:  100%;
+	}
+		
+a
+	{ 
+	color: #77dff1; 
+	text-decoration: none;
+	}
+		
+@font-face 
+	{
+    		font-family: 'LeagueGothicRegular';
+   		src: url('fonts/League_Gothic-webfont.eot');
+    		src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+       		url('fonts/League_Gothic-webfont.woff') format('woff'),
+       		url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+        	url('fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    		font-weight: normal;
+    		font-style: normal;
+    	}
+
+		
+h1 
+	{
+		text-transform: uppercase;
+		color: #77dff1;
+		font-family: LeagueGothicRegular;
+		font-size: 350%;
+		font-weight: lighter;
+		text-shadow: 0px 2px 0px #000;
+		margin: 30px 0 0 0;
+	}
+		
+h2 
+	{
+		text-transform: uppercase;
+		color: #77dff1;
+		font-family: LeagueGothicRegular;
+		font-size: 24px;
+		font-weight: lighter;
+		text-shadow: 0px 2px 0px #000;
+		margin: 15px 0 15px 20px;
+		text-align: left;
+	}
+		
+p 
+	{
+		color: #fff;
+		margin: 20px;
+		font-size: 16px;
+	}
+		
+p.credit 
+	{
+		font-size: 80%; 
+		margin-top: 40px; 
+		color: #ccc;
+	}
+		
+
+.hr 
+	{
+		display: block;
+		border: none;
+		max-width: 99%;
+		height: 2px;
+		background: url(images/divider.png) 100%;
+		margin: 10px;
+	}
+
+		
+.progress 
+
+	{
+		border: 10px;
+		max-width: 99%;
+
+		height: 120px;
+		margin: 10px;
+
+		background: url(images/progress-container.png) no-repeat;
+		background-size:  100% 109px ;
+	}
+
+
+.progress-bar 
+	{
+		border: 10px;
+		top: 15px;
+		left: 10px;
+		height: 43px;
+		background: #72dbf1 url(images/progress-bar.png) repeat-x;
+		background-size:  100% 109px ;
+		
+		position: relative;
+		border-radius:10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+	}
