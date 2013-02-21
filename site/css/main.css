@@ -1,0 +1,57 @@
+
+#mainmenucss {
+color: #373737;
+text-decoration: none;
+position: absolute;
+margin: 0;
+padding-top: 0;
+
+}
+
+#mainmenucss a:link, #mainmenucss a:visited {
+font-size: 15pt;
+color: #373737;
+text-decoration: none;
+}
+
+#mainmenucss ul.menu li {
+list-style: none;
+}
+
+
+
+
+#topmenucss {
+font-size: 15pt;
+color: #373737;
+text-decoration: none;
+}
+
+#topmenucss a:link, #topmenucss a:visited {
+color: #373737;
+text-decoration: none;
+}
+
+
+#topmenucss li {
+	list-style: none;
+	float: right;
+}
+
+
+#contentcss h1 {
+text-align: left;
+font-family: "Times New Roman", Times, serif; 
+font-size: 20pt;
+font-weight: ;
+color: #373737;
+}
+
+#contentcss {
+background-image: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
+background-repeat: no-repeat;
+padding-top: ;
+padding-right: 25px;
+padding-left: 25px;
+padding-down: 25px;
+}
