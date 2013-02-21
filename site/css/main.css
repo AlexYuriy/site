@@ -55,3 +55,26 @@ padding-right: 25px;
 padding-left: 25px;
 padding-down: 25px;
 }
+#content {
+	background: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
+	background-repeat: no-repeat;
+	padding-top: ;
+	padding-left: px;
+	float: left; /* Обтекание по правому краю */
+    width: 70%; /* Ширина левой колонки */
+    border-right: 4%; /* Линия справа */
+}
+#sidebar {
+	background: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
+	background-repeat: no-repeat;
+	padding-top: ;
+    float: left; /* Обтекание по правому краю */
+    width: 26%; /* Ширина */
+	padding-left: 1%;
+	border-left: 4%;
+   /* Отступы вокруг текста */
+}
+#container {
+    width: 70%; /* Ширина макета */
+    margin: 0 auto; /* Выравниваем по центру */
+}

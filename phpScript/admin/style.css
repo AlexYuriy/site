@@ -1,0 +1,49 @@
+.menusmall {
+	FONT-WEIGHT: 300;
+	FONT-SIZE: 11px;
+	COLOR: #002244;
+	LINE-HEIGHT: 14px;
+	FONT-FAMILY: verdana, arial, helvetica, sans serif;
+	TEXT-DECORATION: none
+}
+.menusmall:hover {
+	FONT-WEIGHT: 300;
+	FONT-SIZE: 11px;
+	COLOR: #ffffff;
+	LINE-HEIGHT: 14px;
+	FONT-FAMILY: verdana, arial, helvetica, sans serif;
+	TEXT-DECORATION: none
+}
+#button {
+	BACKGROUND-COLOR: #F4F4F4;
+	BORDER-BOTTOM: #465E84 1px solid;
+	BORDER-LEFT: #465E84 1px solid;
+	BORDER-RIGHT: #465E84 1px solid;
+	BORDER-TOP: #465E84 1px solid;
+	CURSOR: hand;
+	FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 11px;
+	FONT-WEIGHT: 295;
+	MARGIN-TOP: 0px;
+}
+#inp {
+	BACKGROUND-COLOR: White;
+	BORDER-BOTTOM: #BECCDE 1px solid;
+	BORDER-LEFT: #BECCDE 1px solid;
+	BORDER-RIGHT: #BECCDE 1px solid;
+	BORDER-TOP: #BECCDE 1px solid;
+	FONT-FAMILY: verdana, arial, helvetica, sans serif;
+	FONT-SIZE: 11px;
+	MARGIN-TOP: 0px;
+
+#inp2 {
+	BACKGROUND-COLOR: White;
+	BORDER-BOTTOM: #BECCDE 1px solid;
+	BORDER-LEFT: #BECCDE 1px solid;
+	BORDER-RIGHT: #BECCDE 1px solid;
+	BORDER-TOP: #BECCDE 1px solid;
+	FONT-FAMILY: Tahoma,Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 90%;
+	MARGIN-TOP: 0px;
+}
+

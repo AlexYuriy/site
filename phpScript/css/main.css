@@ -1,0 +1,147 @@
+body{
+	background-color : white;
+	font-size : 8pt;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #333366;
+/*
+	scrollbar-3d-light-color : White;
+	scrollbar-arrow-color : Black;
+	scrollbar-base-color : #E5E5E5;
+	scrollbar-dark-shadow-color : White;
+	scrollbar-face-color : White;
+	scrollbar-highlight-color : White;
+	scrollbar-shadow-color : #CCCCCC;
+*/
+	margin : 0px;
+}
+
+.content, p, h1{
+	font-size : 8pt;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #333366;
+	font-weight : normal;
+	font-style : normal;
+	font-variant : normal;
+}
+
+.jcontent{
+	font-size : 8pt;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #333366;
+	text-align : justify;
+}
+
+.header, .title{
+	font-size : 9pt;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #201810;
+	font-weight : normal;
+}
+
+hr{
+	height: 1px;
+	color : gray;
+}
+
+.contur{
+	border: solid 1px  #003366; 
+	margin-right : 10px;
+	margin-left : 0px;
+	margin-top : 2px;
+}
+A {
+	text-decoration : none;
+	color : #000033;
+}
+A:HOVER, A:FOCUS {
+	text-decoration : none;
+	color : #0000CC;
+}
+
+.links{
+	font-size: 11px; 
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #333366;
+}
+
+input, select, textarea{
+  background-color: white;
+  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size : 8pt;
+}
+
+.ok{
+  background-color: white;
+  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size : 8pt;
+}
+
+td{
+    font-size : 8pt;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #333366;
+}
+
+.orange{
+	color : #FFCC00;
+}
+.delbtn{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size : 11px;
+	background-color : #CC3333;
+	color : White;
+	width : 100px;
+}
+.izmbtn{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+   font-size : 11px;
+	background-color : #0099CC;
+	color : White;
+	width : 100px;
+}
+.btn{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+      font-size : 11px;
+	background-color : White;
+	width : 100px;
+}
+.noborder{
+	border : 1px solid Black;
+	background-color : White;
+}
+
+.linkz{
+  text-decoration: underline;
+  color: blue;
+}
+
+H1 , H1:LINK{
+  font-size : 9pt;
+  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color : #201810;
+  font-weight : bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+H1:HOVER, H1:FOCUS{
+	color : #1E90FF;
+}
+
+H2 , H2:LINK{
+  font-size : 8pt;
+  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color : #201810;
+  font-weight : bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+H2:HOVER, H2:FOCUS{
+	color : #1E90FF;
+}
+.rd{
+	background-color: #607488;
+}

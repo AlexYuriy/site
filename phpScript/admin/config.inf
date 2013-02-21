@@ -1,0 +1,32 @@
+<?
+
+$dbhostname = "localhost";
+$dbusername = "login";
+$dbpassword = "password";
+$database = "news";
+
+//»м€ папки скрипта
+$pach_name = "news";
+
+// каталог дл€ хранени€ картинок
+$news_dir = "news/";            // каталог дл€ картинок в новост€х
+
+// новостей на странице, если дата не задана или на сегодн€шную дату,
+// при выборе конкретной даты (щелка€ по календарю) вывод€тс€ новости
+// строго за выбранную дату
+$news_num = 7;
+
+// если "on" , то при сегодн€шней дате вывод€тс€ и последние
+// новости за вчера, позавчера и т.д., ограниченные $news_num (см. выше)
+$start_news = "on"; // on или off
+
+// если "on" , то на календаре по€витс€ приглашение ƒобавить новость
+$news_comon = "off"; // on или off
+
+#Ќ≈ –≈ƒј “»–ќ¬ј“№#
+// таблицы в MySQL
+$table_dnp_news = "dnp_long_news";
+
+$sdb= mysql_connect ("$dbhostname", "$dbusername", "$dbpassword");
+mysql_select_db ("$database", $sdb);
+?>

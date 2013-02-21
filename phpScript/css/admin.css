@@ -1,0 +1,20 @@
+body{
+	scrollbar-3d-light-color : White;
+	scrollbar-arrow-color : #FFCC33;
+	scrollbar-base-color : #E5E5E5;
+	scrollbar-dark-shadow-color : White;
+	scrollbar-face-color : White;
+	scrollbar-highlight-color : White;
+	scrollbar-shadow-color : #CCCCCC;
+	margin : 0px;
+}
+
+.buten{
+	border: solid 1px black;;
+	text-align : center;
+	background-color : ThreedHighlight;
+	cursor: default;
+	margin: 3px;
+      padding-left:  7px;
+      padding-right: 7px;
+}
