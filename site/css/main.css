@@ -1,80 +1,72 @@
-
 #mainmenucss {
-color: #373737;
+color: #070707;
+background: url("../images/logo_center2.jpg")  100%;
+font-size: 30px;
+}
+
+#mainmenucss a:link
+{
+color: #070707;
 text-decoration: none;
-position: absolute;
-margin: 0;
-padding-top: 0;
 
 }
 
-#mainmenucss a:link, #mainmenucss a:visited {
-font-size: 15pt;
-color: #373737;
-text-decoration: none;
+#mainmenucss a:visited 
+{
+color: #070707;
+
 }
-
-#mainmenucss ul.menu li {
-list-style: none;
-}
-
-
 
 
 #topmenucss {
+background: url("../images/logo_top2.jpg") no-repeat;
 font-size: 15pt;
-color: #373737;
-text-decoration: none;
+color: #005880;
 }
 
 #topmenucss a:link, #topmenucss a:visited {
-color: #373737;
+color: #005880;
 text-decoration: none;
 }
 
 
 #topmenucss li {
 	list-style: none;
-	float: right;
+	float : right;
 }
 
 
-#contentcss h1 {
-text-align: left;
-font-family: "Times New Roman", Times, serif; 
-font-size: 20pt;
-font-weight: ;
-color: #373737;
-}
-
+	
 #contentcss {
-background-image: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
-background-repeat: no-repeat;
-padding-top: ;
-padding-right: 25px;
-padding-left: 25px;
-padding-down: 25px;
+
+background: url(../images/left.jpg) no-repeat;
+vertical-align: top;
+ padding: 10px;
+color: #005880;
 }
+
+/*
 #content {
 	background: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
 	background-repeat: no-repeat;
 	padding-top: ;
 	padding-left: px;
-	float: left; /* Обтекание по правому краю */
-    width: 70%; /* Ширина левой колонки */
-    border-right: 4%; /* Линия справа */
+	float: left; /* Обтекание по правому краю 
+    width: 70%; /* Ширина левой колонки 
+    border-right: 4%; /* Линия справа 
 }
 #sidebar {
 	background: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
 	background-repeat: no-repeat;
 	padding-top: ;
     float: left; /* Обтекание по правому краю */
-    width: 26%; /* Ширина */
+    width: 26%; /* Ширина 
 	padding-left: 1%;
 	border-left: 4%;
-   /* Отступы вокруг текста */
+   /* Отступы вокруг текста 
 }
 #container {
-    width: 70%; /* Ширина макета */
-    margin: 0 auto; /* Выравниваем по центру */
+    width: 70%; /* Ширина макета 
+    margin: 0 auto; /* Выравниваем по центру 
 }
+*/
