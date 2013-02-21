@@ -1,4 +1,4 @@
-      <?
+п»ї      <?
 
 $now_month = date("n",time());
 $now_year  = date("Y",time());
@@ -24,7 +24,7 @@ mysql_select_db($database);
 
 
 
-//очистка от гамна
+//РѕС‡РёСЃС‚РєР° РѕС‚ РіР°РјРЅР°
 if (isset($_GET['month'])) {
    $month = $_GET['month'];
    $month = ereg_replace ("[[:space:]]", "", $month);
@@ -54,49 +54,49 @@ if (isset($_GET['today'])) {
 $month = (isset($month)) ? $month : date("n",time());
 $year  = (isset($year)) ? $year : date("Y",time());
 $today = (isset($today))? $today : date("j", time());
-$daylong   = date("l",mktime(1,1,1,$month,$today,$year)); //день недели текст англ.
-$monthlong = date("F",mktime(1,1,1,$month,$today,$year)); //название месяца англ.
-$dayone    = date("w",mktime(1,1,1,$month,1,$year)); //день недели цифрой
-$numdays   = date("t",mktime(1,1,1,$month,1,$year)); //количество дней в месяце
-$alldays   = array('Пн','Вт','Ср','Чт','Пт','<font color=#C05643>Сб</font>','<font color=#C05643>Вс</font>');
+$daylong   = date("l",mktime(1,1,1,$month,$today,$year)); //РґРµРЅСЊ РЅРµРґРµР»Рё С‚РµРєСЃС‚ Р°РЅРіР».
+$monthlong = date("F",mktime(1,1,1,$month,$today,$year)); //РЅР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р° Р°РЅРіР».
+$dayone    = date("w",mktime(1,1,1,$month,1,$year)); //РґРµРЅСЊ РЅРµРґРµР»Рё С†РёС„СЂРѕР№
+$numdays   = date("t",mktime(1,1,1,$month,1,$year)); //РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
+$alldays   = array('РџРЅ','Р’С‚','РЎСЂ','Р§С‚','РџС‚','<font color=#C05643>РЎР±</font>','<font color=#C05643>Р’СЃ</font>');
 $next_year = $year + 1;
 $last_year = $year - 1;
 $next_month = $month + 1;
 $last_month = $month - 1;
 if ($today > $numdays) { $today--; }
-        if($month == "1" ){$month_ru="январь";}
-    elseif($month == "2" ){$month_ru="февраль";}
-    elseif($month == "3" ){$month_ru="март";}
-    elseif($month == "4" ){$month_ru="апрель";}
-    elseif($month == "5" ){$month_ru="май";}
-    elseif($month == "6" ){$month_ru="июнь";}
-    elseif($month == "7" ){$month_ru="июль";}
-    elseif($month == "8" ){$month_ru="август";}
-    elseif($month == "9" ){$month_ru="сентябрь";}
-    elseif($month == "10"){$month_ru="октябрь";}
-    elseif($month == "11"){$month_ru="ноябрь";}
-    elseif($month == "12"){$month_ru="декабрь";}
+        if($month == "1" ){$month_ru="СЏРЅРІР°СЂСЊ";}
+    elseif($month == "2" ){$month_ru="С„РµРІСЂР°Р»СЊ";}
+    elseif($month == "3" ){$month_ru="РјР°СЂС‚";}
+    elseif($month == "4" ){$month_ru="Р°РїСЂРµР»СЊ";}
+    elseif($month == "5" ){$month_ru="РјР°Р№";}
+    elseif($month == "6" ){$month_ru="РёСЋРЅСЊ";}
+    elseif($month == "7" ){$month_ru="РёСЋР»СЊ";}
+    elseif($month == "8" ){$month_ru="Р°РІРіСѓСЃС‚";}
+    elseif($month == "9" ){$month_ru="СЃРµРЅС‚СЏР±СЂСЊ";}
+    elseif($month == "10"){$month_ru="РѕРєС‚СЏР±СЂСЊ";}
+    elseif($month == "11"){$month_ru="РЅРѕСЏР±СЂСЊ";}
+    elseif($month == "12"){$month_ru="РґРµРєР°Р±СЂСЊ";}
 //echo $month;
 //echo $dayone;
 
 
 
 if(checkdate($month,29,$year) && $month==2) {
-   //echo "это 29 мес!!! ";
+   //echo "СЌС‚Рѕ 29 РјРµСЃ!!! ";
    $dayone=7;
    }
 ?>
 <table border=0 cellpadding=4 cellspacing=1 width=170>
 
-<!-- выводим название года -->
+<!-- РІС‹РІРѕРґРёРј РЅР°Р·РІР°РЅРёРµ РіРѕРґР° -->
 <tr bgcolor=#E7EBEF class=menusmall>
       <td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$last_year;?>&today=<?=$today;?>&month=<?=$month;?>">&laquo;&laquo;</a></td>
 <td class="menusmall" colspan="5" valign="middle" align="center">
-      <b ><?=$year;?> г.</b></td>
+      <b ><?=$year;?> Рі.</b></td>
 <td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$next_year;?>&today=<?=$today;?>&month=<?=$month;?>">&raquo;&raquo;</a></td>
 </tr></table>
 
-<!-- //выводим название месяца -->
+<!-- //РІС‹РІРѕРґРёРј РЅР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р° -->
 <table border=0 cellpadding=4 cellspacing=1 width=170>
 <tr bgcolor=#E7EBEF class=menusmall >
      <td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$year?>&today=<?=$today;?>&month=<?=$last_month;?>">&laquo;&laquo;</a></td>
@@ -107,7 +107,7 @@ if(checkdate($month,29,$year) && $month==2) {
 
 <table border=0 cellpadding=2 cellspacing=1 width=170><tr>
 
-<!-- //выводим дни недели -->
+<!-- //РІС‹РІРѕРґРёРј РґРЅРё РЅРµРґРµР»Рё -->
 <?
 foreach($alldays as $value) { ?>
   <td valign="middle" align="center" class=menusmall>
@@ -116,7 +116,7 @@ foreach($alldays as $value) { ?>
 </tr><tr>
 
 
-<!-- //выводим пустые дни месяца как пробелы -->
+<!-- //РІС‹РІРѕРґРёРј РїСѓСЃС‚С‹Рµ РґРЅРё РјРµСЃСЏС†Р° РєР°Рє РїСЂРѕР±РµР»С‹ -->
 <?
 if ($dayone == 0) {$dayone=7;}
 for ($i = 0; $i < ($dayone-1); $i++) {?>
@@ -124,7 +124,7 @@ for ($i = 0; $i < ($dayone-1); $i++) {?>
 <?}?>
 
 
-<!-- //выводим дни месяца -->
+<!-- //РІС‹РІРѕРґРёРј РґРЅРё РјРµСЃСЏС†Р° -->
 <?
 for ($zz = 1; $zz <= $numdays; $zz++) {
   if ($i >= 7) { ?>
@@ -169,23 +169,23 @@ for ($zz = 1; $zz <= $numdays; $zz++) {
 $create_emptys = 7 - ((($dayone-1) + $numdays) % 7);
 if ($create_emptys == 7) { $create_emptys = 0; }
 
-//выводим пустые ячейки
+//РІС‹РІРѕРґРёРј РїСѓСЃС‚С‹Рµ СЏС‡РµР№РєРё
 if ($create_emptys != 0) {?>
   <td valign="middle" align="center" colspan="<?=$create_emptys;?>"></td>
 <?}
 
-if($now_month == "1" ){$now_month_ru="Января";}
-    elseif($now_month == "2" ){$now_month_ru="Февраля";}
-    elseif($now_month == "3" ){$now_month_ru="Марта";}
-    elseif($now_month == "4" ){$now_month_ru="Апреля";}
-    elseif($now_month == "5" ){$now_month_ru="Мая";}
-    elseif($now_month == "6" ){$now_month_ru="Июня";}
-    elseif($now_month == "7" ){$now_month_ru="Июля";}
-    elseif($now_month == "8" ){$now_month_ru="Августа";}
-    elseif($now_month == "9" ){$now_month_ru="Сентября";}
-    elseif($now_month == "10"){$now_month_ru="Октября";}
-    elseif($now_month == "11"){$now_month_ru="Ноября";}
-    elseif($now_month == "12"){$now_month_ru="Декабря";}
+if($now_month == "1" ){$now_month_ru="РЇРЅРІР°СЂСЏ";}
+    elseif($now_month == "2" ){$now_month_ru="Р¤РµРІСЂР°Р»СЏ";}
+    elseif($now_month == "3" ){$now_month_ru="РњР°СЂС‚Р°";}
+    elseif($now_month == "4" ){$now_month_ru="РђРїСЂРµР»СЏ";}
+    elseif($now_month == "5" ){$now_month_ru="РњР°СЏ";}
+    elseif($now_month == "6" ){$now_month_ru="РСЋРЅСЏ";}
+    elseif($now_month == "7" ){$now_month_ru="РСЋР»СЏ";}
+    elseif($now_month == "8" ){$now_month_ru="РђРІРіСѓСЃС‚Р°";}
+    elseif($now_month == "9" ){$now_month_ru="РЎРµРЅС‚СЏР±СЂСЏ";}
+    elseif($now_month == "10"){$now_month_ru="РћРєС‚СЏР±СЂСЏ";}
+    elseif($now_month == "11"){$now_month_ru="РќРѕСЏР±СЂСЏ";}
+    elseif($now_month == "12"){$now_month_ru="Р”РµРєР°Р±СЂСЏ";}
 
 
 ?>
@@ -193,14 +193,14 @@ if($now_month == "1" ){$now_month_ru="Января";}
 </tr>
 </table>
 
-<!-- //выводим сегодняшнюю дату с ссылкой -->
+<!-- //РІС‹РІРѕРґРёРј СЃРµРіРѕРґРЅСЏС€РЅСЋСЋ РґР°С‚Сѓ СЃ СЃСЃС‹Р»РєРѕР№ -->
 <table border=0 cellpadding=4 cellspacing=1 width=170>
 <tr bgcolor=#E7EBEF class=menusmall3>
       <td  align=center class=menusmall3><a href="<?=$PHP_SELF;?>?year=<?=$now_year;?>&today=<?=$now_today;?>&month=<?=$now_month;?>" class=menusmall3>
-       <div >Сегодня: <?=$now_today;?> <?=$now_month_ru;?> <?=$now_year;?> </div></a>
+       <div >РЎРµРіРѕРґРЅСЏ: <?=$now_today;?> <?=$now_month_ru;?> <?=$now_year;?> </div></a>
 	   <? if ($news_comon=="on") {?>	   
 	   <BR>
-	   <A class="smallnews" HREF="<?=$pach_name;?>/admin" target="_blank">Добавить новость</A><?} else {} ?> 
+	   <A class="smallnews" HREF="<?=$pach_name;?>/admin" target="_blank">Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕСЃС‚СЊ</A><?} else {} ?> 
 	   </td>
 </tr></table>
 

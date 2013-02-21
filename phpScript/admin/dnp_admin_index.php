@@ -1,4 +1,4 @@
-<?php
+<?
 
 include("config.inf");
 if ($HTTP_COOKIE_VARS)  {extract($HTTP_COOKIE_VARS, EXTR_SKIP);}
@@ -23,7 +23,7 @@ while ($row=mysql_fetch_array($sql)){
 }
 if ($login!=$db_login or md5($password) != $db_pass){
 		$logined = 0;
-		$error = "Ошибка";
+		$error = "РћС€РёР±РєР°";
 		setcookie("login","",0);
 		setcookie("password","",0);		}
 	else{
@@ -42,7 +42,7 @@ if ($logined==0){
 
 
 ?>
-<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
 <META http-equiv=Content-Language content=ru>
 <LINK href="style.css" type=text/css rel=stylesheet>
 </head>
@@ -50,16 +50,16 @@ if ($logined==0){
 	<table border=0 cellspacing=0 cellpadding=1>
      <form  name=login action="?mod=in" method=post>
       <tr>
-       <td width=80 class=menusmall>Имя: </td>
+       <td width=80 class=menusmall>РРјСЏ: </td>
        <td><input id=inp type=text name=login ></td>
       </tr>
       <tr>
-       <td class=menusmall>Пароль: </td>
+       <td class=menusmall>РџР°СЂРѕР»СЊ: </td>
        <td><input id=inp type=password name=password ></td>
       </tr>
       <tr>
        <td></td>
-       <td ><input id=button type=submit style="width:134" value='      Вход...      '></td>
+       <td ><input id=button type=submit style="width:134" value='      Р’С…РѕРґ...      '></td>
       </tr>
       <input type=hidden name=in_login>
      </form>
@@ -75,22 +75,22 @@ mysql_select_db($database);
 
 <html>
 <head>
-<title>Новости :: пользователь <?=$login;?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>РќРѕРІРѕСЃС‚Рё :: РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ <?=$login;?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="../css/main.css" type="text/css">
 <link rel="stylesheet" href="../css/admin.css" type="text/css">
 </head>
 <body style="margin: 10px;">
-.: Новости :.  пользователь <?=$login;?>
+.: РќРѕРІРѕСЃС‚Рё :.  РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ <?=$login;?>
 <hr size=1 color=black noshade>
 <table border=0><tr><td>
-<a class=menu href="<?=$_SERVER['PHP_SELF']?>?action=add">Добавить новость</a> |
+<a class=menu href="<?=$_SERVER['PHP_SELF']?>?action=add">Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕСЃС‚СЊ</a> |
 <? if ($db_status_us > 1) { } else {?>
-<a class=menu href="<?=$_SERVER['PHP_SELF']?>?action=view">Просмотр / удаление новостей</a> | <?}?>
+<a class=menu href="<?=$_SERVER['PHP_SELF']?>?action=view">РџСЂРѕСЃРјРѕС‚СЂ / СѓРґР°Р»РµРЅРёРµ РЅРѕРІРѕСЃС‚РµР№</a> | <?}?>
 
 <? if ($db_status_us > 2) { } else {?>
-<a class=menu href="<?=$_SERVER['PHP_SELF']?>?mod=users&subaction=editusers" >Пользователи</a> | <?}?>
-<a class=menu href=../../>Выход &raquo;</a>
+<a class=menu href="<?=$_SERVER['PHP_SELF']?>?mod=users&subaction=editusers" >РџРѕР»СЊР·РѕРІР°С‚РµР»Рё</a> | <?}?>
+<a class=menu href=../../>Р’С‹С…РѕРґ &raquo;</a>
 <hr size=1 color=black noshade>
 </td>
 </tr>
@@ -136,10 +136,10 @@ document.formata.content.focus();
 
 <form action=<?=$_SERVER['PHP_SELF']?> method=post enctype=multipart/form-data name=formata>
 
-..:: Добавление новости ::.. <hr>
+..:: Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕСЃС‚Рё ::.. <hr>
 <table cellpadding=5 cellspacing=0 border=0 width=100%>
   <tr>
-    <td width=13%>Дата:</td>
+    <td width=13%>Р”Р°С‚Р°:</td>
     <td><?
 echo '<select name="c_day">';
 $days = array("00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31",);
@@ -167,29 +167,29 @@ foreach($months_num as $key => $value) {
 </td>
 </tr>
   <tr>
-    <td>Новость актуальна:</td><td><input type=text name="actuals" value="0" size="2" maxlength="3"> дней <INPUT TYPE="checkbox" NAME="act_on"> Включить&nbsp;|&nbsp;будет отображаться в самом верху новостей</td> 
+    <td>РќРѕРІРѕСЃС‚СЊ Р°РєС‚СѓР°Р»СЊРЅР°:</td><td><input type=text name="actuals" value="0" size="2" maxlength="3"> РґРЅРµР№ <INPUT TYPE="checkbox" NAME="act_on"> Р’РєР»СЋС‡РёС‚СЊ&nbsp;|&nbsp;Р±СѓРґРµС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ РІ СЃР°РјРѕРј РІРµСЂС…Сѓ РЅРѕРІРѕСЃС‚РµР№</td> 
 </tr>
 </td>
   </tr>
   <tr>
-    <td>Заголовок:</td>
+    <td>Р—Р°РіРѕР»РѕРІРѕРє:</td>
     <td><input type=text name=title style="width: 80%;"></td>
   </tr>
   <tr>
     <td></td>
     <td><? if ($db_status_us == 1) {?>
        
-      <a href="javascript: voidPutATag('<b>','</b>')" title="полужирный текст" class=buten>b</a>
-      <a href="javascript: voidPutATag('<i>','</i>')" title="курсив" class=buten>i</a>
-      <a href="javascript: voidPutATag('<u>','</u>')" title="подчеркивание" class=buten>u</u>
+      <a href="javascript: voidPutATag('<b>','</b>')" title="РїРѕР»СѓР¶РёСЂРЅС‹Р№ С‚РµРєСЃС‚" class=buten>b</a>
+      <a href="javascript: voidPutATag('<i>','</i>')" title="РєСѓСЂСЃРёРІ" class=buten>i</a>
+      <a href="javascript: voidPutATag('<u>','</u>')" title="РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ" class=buten>u</u>
       <a href="javascript: voidPutATag('<center>','</center>')" title="" class=buten>center</a>
-      <a href="javascript: voidPutATag('<ul>','</ul>')" title="список" class=buten>ul</a>
-      <a href="javascript: voidPutATag('<li>','</li>')" title="элемент списка" class=buten>li</a>
-      <a href="javascript: voidPutATag('&laquo;','&raquo;')" title="кавычки" class=buten>&laquo; &raquo;</a>
-      <a href="javascript: voidPutATag('\n<br>','\n ')" title="перенос строки" class=buten>br</a>
-      <a href="javascript: voidPutATag('\n<p>','\n ')" title="абзац" class=buten>Абзац</a>
-      <a href="javascript: voidPutATag('<a href=>','</a>')" title="ссылка" class=buten>ссылка</a><? } else {} ?>
-      <a href=dnp_news_img.php onclick="window.open(this.href,this.target,'width=500,height=350,'+'location=no,toolbar=no,menubar=no,status=yes,scroll=yes');return false;" title='закачать картинку'  class=buten>закачать картинку</a>
+      <a href="javascript: voidPutATag('<ul>','</ul>')" title="СЃРїРёСЃРѕРє" class=buten>ul</a>
+      <a href="javascript: voidPutATag('<li>','</li>')" title="СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР°" class=buten>li</a>
+      <a href="javascript: voidPutATag('&laquo;','&raquo;')" title="РєР°РІС‹С‡РєРё" class=buten>&laquo; &raquo;</a>
+      <a href="javascript: voidPutATag('\n<br>','\n ')" title="РїРµСЂРµРЅРѕСЃ СЃС‚СЂРѕРєРё" class=buten>br</a>
+      <a href="javascript: voidPutATag('\n<p>','\n ')" title="Р°Р±Р·Р°С†" class=buten>РђР±Р·Р°С†</a>
+      <a href="javascript: voidPutATag('<a href=>','</a>')" title="СЃСЃС‹Р»РєР°" class=buten>СЃСЃС‹Р»РєР°</a><? } else {} ?>
+      <a href=dnp_news_img.php onclick="window.open(this.href,this.target,'width=500,height=350,'+'location=no,toolbar=no,menubar=no,status=yes,scroll=yes');return false;" title='Р·Р°РєР°С‡Р°С‚СЊ РєР°СЂС‚РёРЅРєСѓ'  class=buten>Р·Р°РєР°С‡Р°С‚СЊ РєР°СЂС‚РёРЅРєСѓ</a>
     </td>
   </tr>
   <tr>
@@ -199,14 +199,14 @@ foreach($months_num as $key => $value) {
     </td>
   </tr>
   <tr>
-    <td valign=top>Содержание:</td>
+    <td valign=top>РЎРѕРґРµСЂР¶Р°РЅРёРµ:</td>
     <td><textarea name="content" style="height: 250px; width: 100%; padding: 5px;"></textarea></td>
   </tr>
   <tr>
     <td valign=top></td>
-    <td><INPUT TYPE="reset" class=btn value="Очистить">
-<input type=button OnClick="window.open('hot_view.php',this.target,'width=700,height=350,'+'location=no,toolbar=no,menubar=no,status=yes,resizeable=yes,scrollbars=yes');return false;"  value="Предпросмотр текста">
-<input type=submit class=btn value="Сохранить"></td>
+    <td><INPUT TYPE="reset" class=btn value="РћС‡РёСЃС‚РёС‚СЊ">
+<input type=button OnClick="window.open('hot_view.php',this.target,'width=700,height=350,'+'location=no,toolbar=no,menubar=no,status=yes,resizeable=yes,scrollbars=yes');return false;"  value="РџСЂРµРґРїСЂРѕСЃРјРѕС‚СЂ С‚РµРєСЃС‚Р°">
+<input type=submit class=btn value="РЎРѕС…СЂР°РЅРёС‚СЊ"></td>
   </tr>
 </table>
     <input type=hidden name=do value="save">
@@ -229,7 +229,7 @@ elseif(isset($action) && $action=="add_on")
 
      
 	 $datum=$c_year."-".$c_month."-".$c_day;	
-	//HTML с переносом строк
+	//HTML СЃ РїРµСЂРµРЅРѕСЃРѕРј СЃС‚СЂРѕРє
 	if ($db_status_us == 1) {} else {
 	 $content = str_replace("\n",'<br />', $content);
 	 $content = preg_replace("#\[php\](.+?)\[/php\]#ies","php_highlight('\\1')",$content);
@@ -252,18 +252,18 @@ elseif(isset($action) && $action=="add_on")
                   \"$and_mk_date\",
                   \"$act_on\",
                   \"$brouser\")")or die(mysql_error());
-     echo "<font color=green>Запись внесена!!!</font><hr>";
+     echo "<font color=green>Р—Р°РїРёСЃСЊ РІРЅРµСЃРµРЅР°!!!</font><hr>";
      $raz=explode("-",$datum);
      echo "<nobr><a href='".$_SERVER['PHP_SELF']."?action=view&year=".$raz[0]."&today=".$raz[2]."&month=".$raz[1]."' ";
-     echo "class=buten>В просмотр &raquo;</a></nobr>";
+     echo "class=buten>Р’ РїСЂРѕСЃРјРѕС‚СЂ &raquo;</a></nobr>";
    }
    else
    {
-      echo "Информация не может быть добавлена, вы ввели неверные данные<br><ul>";
-      if(!isset($title)   || $title==""){echo "<li>Поле \"Заголовок\" должно быть заполнено обязательно!</li>";}
-      if(!isset($content) || $content==""){echo "<li>\"Содержание\" должно быть заполнено обязательно!</li>";}
-      //if(!isset($datum)   || $datum==""){echo "<li>Поле \"Дата\" $datum $c_year должно быть заполнено обязательно!</li>";}
-      echo "</ul><hr size=1 color=black noshade></a><a href=javascript:history.back(2) class=menu><< Попробуйте еще раз.</a>";
+      echo "РРЅС„РѕСЂРјР°С†РёСЏ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РґРѕР±Р°РІР»РµРЅР°, РІС‹ РІРІРµР»Рё РЅРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ<br><ul>";
+      if(!isset($title)   || $title==""){echo "<li>РџРѕР»Рµ \"Р—Р°РіРѕР»РѕРІРѕРє\" РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!</li>";}
+      if(!isset($content) || $content==""){echo "<li>\"РЎРѕРґРµСЂР¶Р°РЅРёРµ\" РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!</li>";}
+      //if(!isset($datum)   || $datum==""){echo "<li>РџРѕР»Рµ \"Р”Р°С‚Р°\" $datum $c_year РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!</li>";}
+      echo "</ul><hr size=1 color=black noshade></a><a href=javascript:history.back(2) class=menu><< РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.</a>";
    }
 }
 //########### add stop
@@ -272,24 +272,24 @@ elseif(isset($action) && $action=="add_on")
 elseif(isset($action) && $action=="view")
 {
 
-   // удаление ссылки
+   // СѓРґР°Р»РµРЅРёРµ СЃСЃС‹Р»РєРё
   if(@$delete == "on")
    {
     if (isset($id))
      {
       mysql_query("delete from ".$table_dnp_news." where idnum = ".$id."");
-      echo "<font color=red>Запись удачно удалена!!!</font><hr size=1><br>";
+      echo "<font color=red>Р—Р°РїРёСЃСЊ СѓРґР°С‡РЅРѕ СѓРґР°Р»РµРЅР°!!!</font><hr size=1><br>";
      }
    }
 
-   echo "..:: Просмотр новостей ::..<hr>";
+   echo "..:: РџСЂРѕСЃРјРѕС‚СЂ РЅРѕРІРѕСЃС‚РµР№ ::..<hr>";
 
 
    echo "<table border=1 width=100% bordercolor=#BDD7D6 cellpadding=10><tr><td valign=top width=170>";
 
 
 
-   //очистка от гамна
+   //РѕС‡РёСЃС‚РєР° РѕС‚ РіР°РјРЅР°
 if (isset($_GET['month'])) {
    $month = $_GET['month'];
    $month = ereg_replace ("[[:space:]]", "", $month);
@@ -319,41 +319,41 @@ if (isset($_GET['today'])) {
 $month = (isset($month)) ? $month : date("n",time());
 $year  = (isset($year)) ? $year : date("Y",time());
 $today = (isset($today))? $today : date("j", time());
-$daylong   = date("l",mktime(1,1,1,$month,$today,$year)); //день недели текст англ.
-$monthlong = date("F",mktime(1,1,1,$month,$today,$year)); //название месяца англ.
-$dayone    = date("w",mktime(1,1,1,$month,1,$year)); //день недели цифрой
-$numdays   = date("t",mktime(1,1,1,$month,1,$year)); //количество дней в месяце
-$alldays   = array('Пн','Вт','Ср','Чт','Пт','<font color=red>Сб</font>','<font color=red>Вс</font>');
+$daylong   = date("l",mktime(1,1,1,$month,$today,$year)); //РґРµРЅСЊ РЅРµРґРµР»Рё С‚РµРєСЃС‚ Р°РЅРіР».
+$monthlong = date("F",mktime(1,1,1,$month,$today,$year)); //РЅР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р° Р°РЅРіР».
+$dayone    = date("w",mktime(1,1,1,$month,1,$year)); //РґРµРЅСЊ РЅРµРґРµР»Рё С†РёС„СЂРѕР№
+$numdays   = date("t",mktime(1,1,1,$month,1,$year)); //РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
+$alldays   = array('РџРЅ','Р’С‚','РЎСЂ','Р§С‚','РџС‚','<font color=red>РЎР±</font>','<font color=red>Р’СЃ</font>');
 $next_year = $year + 1;
 $last_year = $year - 1;
 $next_month = $month + 1;
 $last_month = $month - 1;
 if ($today > $numdays) { $today--; }
-        if($month == "1" ){$month_ru="январь";}
-    elseif($month == "2" ){$month_ru="февраль";}
-    elseif($month == "3" ){$month_ru="март";}
-    elseif($month == "4" ){$month_ru="апрель";}
-    elseif($month == "5" ){$month_ru="май";}
-    elseif($month == "6" ){$month_ru="июнь";}
-    elseif($month == "7" ){$month_ru="июль";}
-    elseif($month == "8" ){$month_ru="август";}
-    elseif($month == "9" ){$month_ru="сентябрь";}
-    elseif($month == "10"){$month_ru="октябрь";}
-    elseif($month == "11"){$month_ru="ноябрь";}
-    elseif($month == "12"){$month_ru="декабрь";}
+        if($month == "1" ){$month_ru="СЏРЅРІР°СЂСЊ";}
+    elseif($month == "2" ){$month_ru="С„РµРІСЂР°Р»СЊ";}
+    elseif($month == "3" ){$month_ru="РјР°СЂС‚";}
+    elseif($month == "4" ){$month_ru="Р°РїСЂРµР»СЊ";}
+    elseif($month == "5" ){$month_ru="РјР°Р№";}
+    elseif($month == "6" ){$month_ru="РёСЋРЅСЊ";}
+    elseif($month == "7" ){$month_ru="РёСЋР»СЊ";}
+    elseif($month == "8" ){$month_ru="Р°РІРіСѓСЃС‚";}
+    elseif($month == "9" ){$month_ru="СЃРµРЅС‚СЏР±СЂСЊ";}
+    elseif($month == "10"){$month_ru="РѕРєС‚СЏР±СЂСЊ";}
+    elseif($month == "11"){$month_ru="РЅРѕСЏР±СЂСЊ";}
+    elseif($month == "12"){$month_ru="РґРµРєР°Р±СЂСЊ";}
 
 
 echo "<table border=0 cellpadding=4 cellspacing=1 width=170>";
 
-//выводим название года
+//РІС‹РІРѕРґРёРј РЅР°Р·РІР°РЅРёРµ РіРѕРґР°
 echo "<tr bgcolor=#E7EBEF>
       <td align=center><a href=".$_SERVER['PHP_SELF']."?year=".$last_year."&today=".$today."&month=".$month."&action=view>&laquo;</a></td>";
 echo "<td width=100% class=\"cellbg\" colspan=\"5\" valign=\"middle\" align=\"center\">
-      <b>".$year." г.</b></td>\n";
+      <b>".$year." Рі.</b></td>\n";
 echo "<td align=center><a href=".$_SERVER['PHP_SELF']."?year=".$next_year."&today=".$today."&month=".$month."&action=view>&raquo;</a></td>";
 echo "</tr>\n<tr>\n</table>";
 
-//выводим название месяца
+//РІС‹РІРѕРґРёРј РЅР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р°
 echo "<table border=0 cellpadding=4 cellspacing=1 width=170>";
 echo "<tr bgcolor=#E7EBEF>
       <td align=center><a href=".$_SERVER['PHP_SELF']."?year=".$year."&today=".$today."&month=".$last_month."&action=view>&laquo;</a></td>";
@@ -363,7 +363,7 @@ echo "<td align=center><a href=".$_SERVER['PHP_SELF']."?year=".$year."&today=".$
 echo "</tr>\n<tr>\n</table>";
 
 echo "<table border=0 cellpadding=2 cellspacing=1 width=170><tr>";
-//выводим дни недели
+//РІС‹РІРѕРґРёРј РґРЅРё РЅРµРґРµР»Рё
 foreach($alldays as $value) {
   echo "<td valign=\"middle\" align=\"center\" width=\"10%\">
         <b>".$value."</b></td>\n";
@@ -371,14 +371,14 @@ foreach($alldays as $value) {
 echo "</tr>\n<tr>\n";
 
 
-//выводим пустые дни месяца как пробелы
+//РІС‹РІРѕРґРёРј РїСѓСЃС‚С‹Рµ РґРЅРё РјРµСЃСЏС†Р° РєР°Рє РїСЂРѕР±РµР»С‹
 if ($dayone == 0) {$dayone=7;}
 for ($i = 0; $i < ($dayone-1); $i++) {
   echo "<td valign=\"middle\" align=\"center\">&nbsp;</td>\n";
 }
 
 
-//выводим дни месяца
+//РІС‹РІРѕРґРёРј РґРЅРё РјРµСЃСЏС†Р°
 for ($zz = 1; $zz <= $numdays; $zz++) {
  $stat_date = $year."-".$month."-".$zz;
   $stat_result = mysql_query("select * from ".$table_dnp_news." where datum = '".$stat_date."' ");
@@ -431,7 +431,7 @@ for ($zz = 1; $zz <= $numdays; $zz++) {
 $create_emptys = 7 - ((($dayone-1) + $numdays) % 7);
 if ($create_emptys == 7) { $create_emptys = 0; }
 
-//выводим пустые ячейки
+//РІС‹РІРѕРґРёРј РїСѓСЃС‚С‹Рµ СЏС‡РµР№РєРё
 if ($create_emptys != 0) {
   echo "<td valign=\"middle\" align=\"center\" colspan=\"$create_emptys\"></td>\n";
 }
@@ -462,18 +462,18 @@ echo "</table>";
         $idnum=mysql_result($result, $k , "idnum");
 
         $datun=explode("-",$datum);
-            if($datun[1] == "1" || $datun[1] == "01"){$month="января";}
-        elseif($datun[1] == "2" || $datun[1] == "02"){$month="февраля";}
-        elseif($datun[1] == "3" || $datun[1] == "03"){$month="марта";}
-        elseif($datun[1] == "4" || $datun[1] == "04"){$month="апреля";}
-        elseif($datun[1] == "5" || $datun[1] == "05"){$month="мая";}
-        elseif($datun[1] == "6" || $datun[1] == "06"){$month="июня";}
-        elseif($datun[1] == "7" || $datun[1] == "07"){$month="июля";}
-        elseif($datun[1] == "8" || $datun[1] == "08"){$month="августа";}
-        elseif($datun[1] == "9" || $datun[1] == "09"){$month="сентября";}
-        elseif($datun[1] == "10"){$month="октября";}
-        elseif($datun[1] == "11"){$month="ноября";}
-        elseif($datun[1] == "12"){$month="декабря";}
+            if($datun[1] == "1" || $datun[1] == "01"){$month="СЏРЅРІР°СЂСЏ";}
+        elseif($datun[1] == "2" || $datun[1] == "02"){$month="С„РµРІСЂР°Р»СЏ";}
+        elseif($datun[1] == "3" || $datun[1] == "03"){$month="РјР°СЂС‚Р°";}
+        elseif($datun[1] == "4" || $datun[1] == "04"){$month="Р°РїСЂРµР»СЏ";}
+        elseif($datun[1] == "5" || $datun[1] == "05"){$month="РјР°СЏ";}
+        elseif($datun[1] == "6" || $datun[1] == "06"){$month="РёСЋРЅСЏ";}
+        elseif($datun[1] == "7" || $datun[1] == "07"){$month="РёСЋР»СЏ";}
+        elseif($datun[1] == "8" || $datun[1] == "08"){$month="Р°РІРіСѓСЃС‚Р°";}
+        elseif($datun[1] == "9" || $datun[1] == "09"){$month="СЃРµРЅС‚СЏР±СЂСЏ";}
+        elseif($datun[1] == "10"){$month="РѕРєС‚СЏР±СЂСЏ";}
+        elseif($datun[1] == "11"){$month="РЅРѕСЏР±СЂСЏ";}
+        elseif($datun[1] == "12"){$month="РґРµРєР°Р±СЂСЏ";}
 
         if(($k % 2) == 0){$bgcol="#F7F8FC";}
         else{$bgcol="#EBEBEC";}
@@ -488,7 +488,7 @@ echo "</table>";
            echo "<form method=post action=".$_SERVER['PHP_SELF']."?action=izm name=izm".$k." style=\"margin: 0px; padding: 0px;\">
                  <td width=50 valign=top>";
            echo "<input style=\"width: 55px; background-color: green; color: white;\"
-                  type=submit value=\"Править\">";
+                  type=submit value=\"РџСЂР°РІРёС‚СЊ\">";
            echo "<input type=hidden name=action value=izm>";
            echo "<input type=hidden name=idnum value=".$idnum.">";
            echo "</td></form>";
@@ -497,7 +497,7 @@ echo "</table>";
            <form method=post action="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=date("j");?>&month=<?=date("n");?>&action=view"
              name=dela<?=$k?> style="margin: 0px;">
              <input style="width: 55px; background: red; color: white;"
-              type=button value="Удалить" OnClick="dela<?=$k?>.submit();">
+              type=button value="РЈРґР°Р»РёС‚СЊ" OnClick="dela<?=$k?>.submit();">
              <input type=hidden name=delete value=on>
              <input type=hidden name=action value=view>
              <input type=hidden name=id value=<?=$idnum?>>
@@ -526,16 +526,16 @@ echo "</table>";
          <hr>
          <table width=100% cellpadding=2 border=0 cellspacing=0 style="border: solid 1 px gray;">
            <tr>
-             <td class=header bgcolor="#F0F0F0">Дата: <b><?=$datum?></b> | Время: <b><?=$time?></b></td>
+             <td class=header bgcolor="#F0F0F0">Р”Р°С‚Р°: <b><?=$datum?></b> | Р’СЂРµРјСЏ: <b><?=$time?></b></td>
            </tr>
            <tr>
-             <td class=header bgcolor="#F0F0F0">Заголовок: <b><?=$title?></b></td>
+             <td class=header bgcolor="#F0F0F0">Р—Р°РіРѕР»РѕРІРѕРє: <b><?=$title?></b></td>
            </tr>
            <tr>
-             <td class=header bgcolor="#F0F0F0">IP адрес автора: <b><?=$ip?></b></td>
+             <td class=header bgcolor="#F0F0F0">IP Р°РґСЂРµСЃ Р°РІС‚РѕСЂР°: <b><?=$ip?></b></td>
            </tr>
            <tr>
-             <td class=header bgcolor="#F0F0F0">Система: <b><?=$brouser?></b></td>
+             <td class=header bgcolor="#F0F0F0">РЎРёСЃС‚РµРјР°: <b><?=$brouser?></b></td>
            </tr>
            <tr>
              <td>
@@ -548,7 +548,7 @@ echo "</table>";
            </tr>
          </table>
          <hr>
-         <a href="javascript: history.back(2)">&laquo; назад</a>
+         <a href="javascript: history.back(2)">&laquo; РЅР°Р·Р°Рґ</a>
          <?
       }
 
@@ -587,14 +587,14 @@ document.formata.content.focus();
 
 <form action="<?=$_SERVER['PHP_SELF']?>?year=<?=$dati[0];?>&today=<?=$dati[2];?>&month=<?=$dati[1];?>" method=post enctype=multipart/form-data name=formata>
 
-..:: Изменение новости ::.. <hr>
+..:: РР·РјРµРЅРµРЅРёРµ РЅРѕРІРѕСЃС‚Рё ::.. <hr>
 <table cellpadding=5 cellspacing=0 border=0 width=100%>
   <tr>
-    <td width=10%>Время:</td>
+    <td width=10%>Р’СЂРµРјСЏ:</td>
     <td><input type=text name=time style="width: 100px;" value="<?=$time?>"></td>
   </tr>
   <tr>
-    <td width=13%>Дата:</td>
+    <td width=13%>Р”Р°С‚Р°:</td>
     <td><?$dati=explode("-",$datum);
 echo '<select name="c_day">';
 $days = array("00", "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31",);
@@ -634,41 +634,41 @@ foreach($months_num as $key => $value) {
 </td>
 </tr>
   <tr>
-    <td>Новость актуальна:</td><td><input type=text name="actuals" value="<?=$date_stop;?>" size="2" maxlength="3"> дней <INPUT TYPE="checkbox" NAME="act_on" <? if ($act_status=="on") {?>checked> Выключить&nbsp;|&nbsp;не будет отображаться в самом верху новостей<?}else {?>>Включить&nbsp;|&nbsp;будет отображаться в самом верху новостей<?}?></td>
+    <td>РќРѕРІРѕСЃС‚СЊ Р°РєС‚СѓР°Р»СЊРЅР°:</td><td><input type=text name="actuals" value="<?=$date_stop;?>" size="2" maxlength="3"> РґРЅРµР№ <INPUT TYPE="checkbox" NAME="act_on" <? if ($act_status=="on") {?>checked> Р’С‹РєР»СЋС‡РёС‚СЊ&nbsp;|&nbsp;РЅРµ Р±СѓРґРµС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ РІ СЃР°РјРѕРј РІРµСЂС…Сѓ РЅРѕРІРѕСЃС‚РµР№<?}else {?>>Р’РєР»СЋС‡РёС‚СЊ&nbsp;|&nbsp;Р±СѓРґРµС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ РІ СЃР°РјРѕРј РІРµСЂС…Сѓ РЅРѕРІРѕСЃС‚РµР№<?}?></td>
 </tr>
 </td>
   </tr>
   <tr>
-    <td>Заголовок:</td>
+    <td>Р—Р°РіРѕР»РѕРІРѕРє:</td>
     <td><input type=text name=title style="width: 80%;" value="<?=$title?>"></td>
   </tr>
   <tr>
     <td></td>
     <td><? if ($db_status_us == 1) {?>
       
-      <a href="javascript: voidPutATag('<b>','</b>')" title="полужирный текст" class=buten>b</a>
-      <a href="javascript: voidPutATag('<i>','</i>')" title="курсив" class=buten>i</a>
-      <a href="javascript: voidPutATag('<u>','</u>')" title="подчеркивание" class=buten>u</u>
+      <a href="javascript: voidPutATag('<b>','</b>')" title="РїРѕР»СѓР¶РёСЂРЅС‹Р№ С‚РµРєСЃС‚" class=buten>b</a>
+      <a href="javascript: voidPutATag('<i>','</i>')" title="РєСѓСЂСЃРёРІ" class=buten>i</a>
+      <a href="javascript: voidPutATag('<u>','</u>')" title="РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ" class=buten>u</u>
       <a href="javascript: voidPutATag('<center>','</center>')" title="" class=buten>center</a>
-      <a href="javascript: voidPutATag('<ul>','</ul>')" title="список" class=buten>ul</a>
-      <a href="javascript: voidPutATag('<li>','</li>')" title="элемент списка" class=buten>li</a>
-      <a href="javascript: voidPutATag('&laquo;','&raquo;')" title="кавычки" class=buten>&laquo; &raquo;</a>
-      <a href="javascript: voidPutATag('\n<br>','\n ')" title="перенос строки" class=buten>br</a>
-      <a href="javascript: voidPutATag('\n<p>','\n ')" title="абзац" class=buten>Абзац</a>
-      <a href="javascript: voidPutATag('<a href=>','</a>')" title="ссылка" class=buten>ссылка</a><? } else {} ?>
-      <a href=dnp_news_img.php onclick="window.open(this.href,this.target,'width=500,height=350,'+'location=no,toolbar=no,menubar=no,status=yes,scroll=yes');return false;" title='закачать картинку'  class=buten>закачать картинку</a>
+      <a href="javascript: voidPutATag('<ul>','</ul>')" title="СЃРїРёСЃРѕРє" class=buten>ul</a>
+      <a href="javascript: voidPutATag('<li>','</li>')" title="СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР°" class=buten>li</a>
+      <a href="javascript: voidPutATag('&laquo;','&raquo;')" title="РєР°РІС‹С‡РєРё" class=buten>&laquo; &raquo;</a>
+      <a href="javascript: voidPutATag('\n<br>','\n ')" title="РїРµСЂРµРЅРѕСЃ СЃС‚СЂРѕРєРё" class=buten>br</a>
+      <a href="javascript: voidPutATag('\n<p>','\n ')" title="Р°Р±Р·Р°С†" class=buten>РђР±Р·Р°С†</a>
+      <a href="javascript: voidPutATag('<a href=>','</a>')" title="СЃСЃС‹Р»РєР°" class=buten>СЃСЃС‹Р»РєР°</a><? } else {} ?>
+      <a href=dnp_news_img.php onclick="window.open(this.href,this.target,'width=500,height=350,'+'location=no,toolbar=no,menubar=no,status=yes,scroll=yes');return false;" title='Р·Р°РєР°С‡Р°С‚СЊ РєР°СЂС‚РёРЅРєСѓ'  class=buten>Р·Р°РєР°С‡Р°С‚СЊ РєР°СЂС‚РёРЅРєСѓ</a>
     </td>
   </tr>
   <tr>
-    <td valign=top>Содержание: <?=$db_status_us;?></td>
+    <td valign=top>РЎРѕРґРµСЂР¶Р°РЅРёРµ: <?=$db_status_us;?></td>
     <td><textarea name=content style="height: 250px; width: 100%; padding: 5px;"><?//=$content;
 		 if ($db_status_us == 1) {echo $content; } else {echo strip_tags($content);} ?></textarea></td>
   </tr>
   <tr>
     <td valign=top></td>
     <td>
-<input type=button OnClick="window.open('hot_view.php',this.target,'width=700,height=350,'+'location=no,toolbar=no,menubar=no,status=yes,resizeable=yes,scrollbars=yes');return false;"  value="Предпросмотр текста">
-<input type=submit class=btn value="Сохранить"></td>
+<input type=button OnClick="window.open('hot_view.php',this.target,'width=700,height=350,'+'location=no,toolbar=no,menubar=no,status=yes,resizeable=yes,scrollbars=yes');return false;"  value="РџСЂРµРґРїСЂРѕСЃРјРѕС‚СЂ С‚РµРєСЃС‚Р°">
+<input type=submit class=btn value="РЎРѕС…СЂР°РЅРёС‚СЊ"></td>
   </tr>
 </table>
     <input type=hidden name=do value="save">
@@ -704,19 +704,19 @@ elseif(isset($action) && $action=="izm_on")
                   actuals = \"".$and_mk_date."\",
                   act_status = \"".$act_on."\",
                   content =\"".$content."\" where idnum = \"".$idnum."\" ") or die(mysql_error());
-     echo "<font color=green>Запись внесена!!!</font><hr>";
+     echo "<font color=green>Р—Р°РїРёСЃСЊ РІРЅРµСЃРµРЅР°!!!</font><hr>";
      $raz=explode("-",$datum);
      echo "<nobr><a href='".$_SERVER['PHP_SELF']."?action=view&year=".$year."&today=".$today."&month=".$month."' ";
-     echo "class=buten>В просмотр &raquo;</a></nobr>";
+     echo "class=buten>Р’ РїСЂРѕСЃРјРѕС‚СЂ &raquo;</a></nobr>";
    }
    else
    {
-      echo "Информация не может быть добавлена, вы ввели неверные данные <br><ul>";
-      if(!isset($title)   || $title==""){echo "<li>Поле \"Заголовок\" должно быть заполнено обязательно!</li>";}
-      if(!isset($content) || $content==""){echo "<li>\"Содержание\" должно быть заполнено обязательно!</li>";}
-      //if(!isset($time)    || $time==""){echo "<li>Поле \"Время\" должно быть заполнено обязательно!</li>";}
-      //if(!isset($dates)   || $dates==""){echo "<li>Поле \"Дата\" должно быть заполнено обязательно!</li>";}
-      echo "</ul><hr size=1 color=black noshade></a><a href=javascript:history.back(2) class=menu><< Попробуйте еще раз.</a>";
+      echo "РРЅС„РѕСЂРјР°С†РёСЏ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РґРѕР±Р°РІР»РµРЅР°, РІС‹ РІРІРµР»Рё РЅРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ <br><ul>";
+      if(!isset($title)   || $title==""){echo "<li>РџРѕР»Рµ \"Р—Р°РіРѕР»РѕРІРѕРє\" РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!</li>";}
+      if(!isset($content) || $content==""){echo "<li>\"РЎРѕРґРµСЂР¶Р°РЅРёРµ\" РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!</li>";}
+      //if(!isset($time)    || $time==""){echo "<li>РџРѕР»Рµ \"Р’СЂРµРјСЏ\" РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!</li>";}
+      //if(!isset($dates)   || $dates==""){echo "<li>РџРѕР»Рµ \"Р”Р°С‚Р°\" РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ!</li>";}
+      echo "</ul><hr size=1 color=black noshade></a><a href=javascript:history.back(2) class=menu><< РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.</a>";
    }
 }
 //########### izm add stop

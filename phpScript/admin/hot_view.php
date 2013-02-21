@@ -1,7 +1,7 @@
 <html>
 <head>
-<title>Предварительный просмотр</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>РџСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <?
  $dura1=$SERVER_NAME.$REQUEST_URI; 
  $base_dir = str_replace("admin/hot_view.php", "", $dura1);
@@ -13,7 +13,7 @@
 <body bgcolor="#FFFFFF" style="margin: 10px;">
 <hr style="height: 3px;">
 
-<center><input type=button value="Закрыть окно" onclick="window.close();"></center>
+<center><input type=button value="Р—Р°РєСЂС‹С‚СЊ РѕРєРЅРѕ" onclick="window.close();"></center>
 
 <hr style="height: 3px;">
 <p class=jcontent>

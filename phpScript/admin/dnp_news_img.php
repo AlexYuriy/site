@@ -1,7 +1,7 @@
 <html>
 <head>
-<title>Загрузка картинки в новости</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Р—Р°РіСЂСѓР·РєР° РєР°СЂС‚РёРЅРєРё РІ РЅРѕРІРѕСЃС‚Рё</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="../css/main.css" type="text/css">
 <link rel="stylesheet" href="../css/admin.css" type="text/css">
 </head>
@@ -12,13 +12,13 @@ include("config.inf");
 if(!isset($go))
 {
 ?>
-<b>Внимание, корректно работает в Internet Explorer</b>
+<b>Р’РЅРёРјР°РЅРёРµ, РєРѕСЂСЂРµРєС‚РЅРѕ СЂР°Р±РѕС‚Р°РµС‚ РІ Internet Explorer</b>
 <hr>
 <form action="<?=$PHP_SELF?>?go" method=post enctype=multipart/form-data>
 <table cellpading=3 cellspacing=0 border=0 width=100%>
   <tr>
     <td width=20%>
-      Картинка
+      РљР°СЂС‚РёРЅРєР°
     </td>
     <td width=80%>
       <input type=file name=image style="width: 100%;">
@@ -26,7 +26,7 @@ if(!isset($go))
   </tr>
   <tr>
     <td>
-      Название
+      РќР°Р·РІР°РЅРёРµ
     </td>
     <td>
       <input type=text name=alt style="width: 100%;">
@@ -34,10 +34,10 @@ if(!isset($go))
   </tr>
   <tr>
     <td>
-      Выровнять
+      Р’С‹СЂРѕРІРЅСЏС‚СЊ
     </td>
     <td>
-      <input type=radio name=align value=none checked> нет |
+      <input type=radio name=align value=none checked> РЅРµС‚ |
       <input type=radio name=align value=left>left |
       <input type=radio name=align value=right>right |
       <input type=radio name=align value=middle>middle |
@@ -49,7 +49,7 @@ if(!isset($go))
 
     </td>
     <td>
-      <input type=submit value="Закачать">
+      <input type=submit value="Р—Р°РєР°С‡Р°С‚СЊ">
       <input type=hidden name=go value=herach>
     </td>
   </tr>
@@ -59,8 +59,8 @@ if(!isset($go))
 }
 elseif(isset($go))
 {
-   //проверка клевости файла
-   if(!file_exists($image)){echo "Ошибка загрузки!!!"; exit;}
+   //РїСЂРѕРІРµСЂРєР° РєР»РµРІРѕСЃС‚Рё С„Р°Р№Р»Р°
+   if(!file_exists($image)){echo "РћС€РёР±РєР° Р·Р°РіСЂСѓР·РєРё!!!"; exit;}
    if(isset($image) && ereg(".gif$",$image_name) || ereg(".jpg$",$image_name) || ereg(".jpeg$",$image_name)) $is_img="ok";
    if(isset($image) && $image !="" && $image !=" " && $image_size > 0) $is_file="ok";
    if(isset($image) && $image_size <= 30000) $is_size="ok";
@@ -75,59 +75,59 @@ elseif(isset($go))
 
       $new_image_name = strtolower($image_name);
 
-      function ruslat ($string) // Функция перекодировки кириллицы в транслит.
+      function ruslat ($string) // Р¤СѓРЅРєС†РёСЏ РїРµСЂРµРєРѕРґРёСЂРѕРІРєРё РєРёСЂРёР»Р»РёС†С‹ РІ С‚СЂР°РЅСЃР»РёС‚.
       {
-       $string = ereg_replace("а","a",$string);
-       $string = ereg_replace("б","b",$string);
-       $string = ereg_replace("в","v",$string);
-       $string = ereg_replace("г","g",$string);
-       $string = ereg_replace("д","d",$string);
-       $string = ereg_replace("е","e",$string);
-       $string = ereg_replace("ё","e",$string);
-       $string = ereg_replace("ж","zh",$string);
-       $string = ereg_replace("з","z",$string);
-       $string = ereg_replace("и","i",$string);
-       $string = ereg_replace("й","iy",$string);
-       $string = ereg_replace("к","k",$string);
-       $string = ereg_replace("л","l",$string);
-       $string = ereg_replace("м","m",$string);
-       $string = ereg_replace("н","n",$string);
-       $string = ereg_replace("о","o",$string);
-       $string = ereg_replace("п","p",$string);
-       $string = ereg_replace("р","r",$string);
-       $string = ereg_replace("с","s",$string);
-       $string = ereg_replace("т","t",$string);
-       $string = ereg_replace("у","u",$string);
-       $string = ereg_replace("ф","f",$string);
-       $string = ereg_replace("х","h",$string);
-       $string = ereg_replace("ц","ts",$string);
-       $string = ereg_replace("ч","ch",$string);
-       $string = ereg_replace("щ","sh",$string);
-       $string = ereg_replace("ь","",$string);
-       $string = ereg_replace("ъ","",$string);
-       $string = ereg_replace("э","e",$string);
-       $string = ereg_replace("ю","yu",$string);
-       $string = ereg_replace("я","ya",$string);
+       $string = ereg_replace("Р°","a",$string);
+       $string = ereg_replace("Р±","b",$string);
+       $string = ereg_replace("РІ","v",$string);
+       $string = ereg_replace("Рі","g",$string);
+       $string = ereg_replace("Рґ","d",$string);
+       $string = ereg_replace("Рµ","e",$string);
+       $string = ereg_replace("С‘","e",$string);
+       $string = ereg_replace("Р¶","zh",$string);
+       $string = ereg_replace("Р·","z",$string);
+       $string = ereg_replace("Рё","i",$string);
+       $string = ereg_replace("Р№","iy",$string);
+       $string = ereg_replace("Рє","k",$string);
+       $string = ereg_replace("Р»","l",$string);
+       $string = ereg_replace("Рј","m",$string);
+       $string = ereg_replace("РЅ","n",$string);
+       $string = ereg_replace("Рѕ","o",$string);
+       $string = ereg_replace("Рї","p",$string);
+       $string = ereg_replace("СЂ","r",$string);
+       $string = ereg_replace("СЃ","s",$string);
+       $string = ereg_replace("С‚","t",$string);
+       $string = ereg_replace("Сѓ","u",$string);
+       $string = ereg_replace("С„","f",$string);
+       $string = ereg_replace("С…","h",$string);
+       $string = ereg_replace("С†","ts",$string);
+       $string = ereg_replace("С‡","ch",$string);
+       $string = ereg_replace("С‰","sh",$string);
+       $string = ereg_replace("СЊ","",$string);
+       $string = ereg_replace("СЉ","",$string);
+       $string = ereg_replace("СЌ","e",$string);
+       $string = ereg_replace("СЋ","yu",$string);
+       $string = ereg_replace("СЏ","ya",$string);
        return $string;
       }
 
 
-      if(ereg("[а-яА-Я]",$new_image_name)) {
+      if(ereg("[Р°-СЏРђ-РЇ]",$new_image_name)) {
       $new_image_name = ruslat($new_image_name);
       }
 
 
-      //приделываем к имени файла случайное число
+      //РїСЂРёРґРµР»С‹РІР°РµРј Рє РёРјРµРЅРё С„Р°Р№Р»Р° СЃР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ
       mt_srand((double)microtime()*1000000);
       $uid=mt_rand(1,1000000);
       $imghuy = $uid."_".$new_image_name;
 
       $imgdir = $news_dir;
-      if(!file_exists($image)){echo "Ошибка копирования!!!"; exit;}
+      if(!file_exists($image)){echo "РћС€РёР±РєР° РєРѕРїРёСЂРѕРІР°РЅРёСЏ!!!"; exit;}
       Copy($image,$imgdir.$imghuy);
 
 
-      echo "Файл загружен<br>можно закрыть это окно!!!<br>";
+      echo "Р¤Р°Р№Р» Р·Р°РіСЂСѓР¶РµРЅ<br>РјРѕР¶РЅРѕ Р·Р°РєСЂС‹С‚СЊ СЌС‚Рѕ РѕРєРЅРѕ!!!<br>";
       ?>
       <script language="JavaScript">
         opener.document.formata.content.focus();
@@ -141,17 +141,17 @@ elseif(isset($go))
         window.close();
       </script>
       <?
-      echo "<input type=button value=\"закрыть\" onClick=\"window.close();\">";
+      echo "<input type=button value=\"Р·Р°РєСЂС‹С‚СЊ\" onClick=\"window.close();\">";
    }
    else
    {
-    echo "<font color=red>Ошибка загрузки файла картинки!!!</font>";
+    echo "<font color=red>РћС€РёР±РєР° Р·Р°РіСЂСѓР·РєРё С„Р°Р№Р»Р° РєР°СЂС‚РёРЅРєРё!!!</font>";
      echo "<br><ul>";
-      if(!isset($is_img)  || $is_img!="ok" ){echo "<li>Файл картинки может быть только <b>gif, jpg, jpeg</b>!</li>";}
-      if(!isset($is_file) || $is_file!="ok"){echo "<li>Вы не выбрали файл для загрузки!</li>";}
-      if(!isset($is_size) || $is_size!="ok"){echo "<li>Размер файла картинки не может быть больше <b>30 Килобайт</b>!</li>";}
-      if(!isset($is_alt)  || $is_alt!="ok" ){echo "<li>Не заполнено поле \"Название\" для файла картинки!</li>";}
-      echo "</ul><hr size=1 color=black noshade></a><a href=javascript:history.back(2) class=menu><< Попробуйте еще раз.</a>";
+      if(!isset($is_img)  || $is_img!="ok" ){echo "<li>Р¤Р°Р№Р» РєР°СЂС‚РёРЅРєРё РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ <b>gif, jpg, jpeg</b>!</li>";}
+      if(!isset($is_file) || $is_file!="ok"){echo "<li>Р’С‹ РЅРµ РІС‹Р±СЂР°Р»Рё С„Р°Р№Р» РґР»СЏ Р·Р°РіСЂСѓР·РєРё!</li>";}
+      if(!isset($is_size) || $is_size!="ok"){echo "<li>Р Р°Р·РјРµСЂ С„Р°Р№Р»Р° РєР°СЂС‚РёРЅРєРё РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ <b>30 РљРёР»РѕР±Р°Р№С‚</b>!</li>";}
+      if(!isset($is_alt)  || $is_alt!="ok" ){echo "<li>РќРµ Р·Р°РїРѕР»РЅРµРЅРѕ РїРѕР»Рµ \"РќР°Р·РІР°РЅРёРµ\" РґР»СЏ С„Р°Р№Р»Р° РєР°СЂС‚РёРЅРєРё!</li>";}
+      echo "</ul><hr size=1 color=black noshade></a><a href=javascript:history.back(2) class=menu><< РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.</a>";
 
    }
 }

@@ -1,4 +1,4 @@
-<?php 
+п»ї<?php 
 $now_month = date("n",time());
 $now_year  = date("Y",time());
 $now_today = date("j", time());
@@ -19,7 +19,7 @@ if($PHP_SELF == ""){ $PHP_SELF = $HTTP_SERVER_VARS["PHP_SELF"]; }
 function translit($trnsl)
 
 {
-        $rus = array('а','б','в','г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я');
+        $rus = array('Р°','Р±','РІ','Рі', 'Рґ', 'Рµ', 'С‘', 'Р¶', 'Р·', 'Рё', 'Р№', 'Рє', 'Р»', 'Рј', 'РЅ', 'Рѕ', 'Рї', 'СЂ', 'СЃ', 'С‚', 'Сѓ', 'С„', 'С…', 'С†', 'С‡', 'С€', 'С‰', 'СЉ', 'С‹', 'СЊ', 'СЌ', 'СЋ', 'СЏ');
     $eng = array('a', 'b', 'v', 'g', 'd', 'e', 'e', 'zh', 'z', 'i', 'y', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f', 'h', 'c', 'ch', 'sh', 'sz', '', 'y', '', 'e', 'yu', 'ya');
         $trnsl = preg_replace('/\W/', '-', strtolower(strip_tags($trnsl)));
     $trnsl = preg_replace('/[-]+/', '-', $trnsl);
@@ -138,24 +138,24 @@ for($k=0;$k < $rows;$k++)
     $rew_datum=$loc_date=mktime(0, 0, 0, $dati[1], $dati[2], $dati[0]);
 	$shot_content=explode("[cut]",$content);
 
-if($dati[1] == "1" || $dati[1] == "01"){$months="января";}
-    elseif($dati[1] == "2" || $dati[1] == "02"){$months="февраля";}
-    elseif($dati[1] == "3" || $dati[1] == "03"){$months="марта";}
-    elseif($dati[1] == "4" || $dati[1] == "04"){$months="апреля";}
-    elseif($dati[1] == "5" || $dati[1] == "05"){$months="мая";}
-    elseif($dati[1] == "6" || $dati[1] == "06"){$months="июня";}
-    elseif($dati[1] == "7" || $dati[1] == "07"){$months="июля";}
-    elseif($dati[1] == "8" || $dati[1] == "08"){$months="августа";}
-    elseif($dati[1] == "9" || $dati[1] == "09"){$months="сентября";}
-    elseif($dati[1] == "10"){$months="октября";}
-    elseif($dati[1] == "11"){$months="ноября";}
-    elseif($dati[1] == "12"){$months="декабря";}
+if($dati[1] == "1" || $dati[1] == "01"){$months="СЏРЅРІР°СЂСЏ";}
+    elseif($dati[1] == "2" || $dati[1] == "02"){$months="С„РµРІСЂР°Р»СЏ";}
+    elseif($dati[1] == "3" || $dati[1] == "03"){$months="РјР°СЂС‚Р°";}
+    elseif($dati[1] == "4" || $dati[1] == "04"){$months="Р°РїСЂРµР»СЏ";}
+    elseif($dati[1] == "5" || $dati[1] == "05"){$months="РјР°СЏ";}
+    elseif($dati[1] == "6" || $dati[1] == "06"){$months="РёСЋРЅСЏ";}
+    elseif($dati[1] == "7" || $dati[1] == "07"){$months="РёСЋР»СЏ";}
+    elseif($dati[1] == "8" || $dati[1] == "08"){$months="Р°РІРіСѓСЃС‚Р°";}
+    elseif($dati[1] == "9" || $dati[1] == "09"){$months="СЃРµРЅС‚СЏР±СЂСЏ";}
+    elseif($dati[1] == "10"){$months="РѕРєС‚СЏР±СЂСЏ";}
+    elseif($dati[1] == "11"){$months="РЅРѕСЏР±СЂСЏ";}
+    elseif($dati[1] == "12"){$months="РґРµРєР°Р±СЂСЏ";}
 	
 
 
 
 ?>        
-		 <!-- блок новости -->
+		 <!-- Р±Р»РѕРє РЅРѕРІРѕСЃС‚Рё -->
               
                 <?
 					$Lengthtext=strlen($content);
@@ -170,9 +170,9 @@ if($dati[1] == "1" || $dati[1] == "01"){$months="января";}
 						 	<TD bgcolor="#DEDFEC" width="25%" height="20" class="menu"><font color=#336600>&nbsp;<?=$dati[2];?> <?=$months;?> <?=$dati[0];?></font></TD>
 						 	<TD bgcolor="#DEDFEC" <? if (strlen($title)>65) {?> class="menusmall" <?} else {?>class="menu"<?}?>><b><?=$title;?></b></TD>
 						 </TR>
-							<TR><!-- <a class="menusmall2" href="<? rewr_url();?>"><FONT COLOR="#330099">Подробнее&nbsp;&raquo</a> -->
+							<TR><!-- <a class="menusmall2" href="<? rewr_url();?>"><FONT COLOR="#330099">РџРѕРґСЂРѕР±РЅРµРµ&nbsp;&raquo</a> -->
 						 		<TD  colspan="2" class="menusmall">&nbsp;&nbsp;<?=$name;?><BR>
-								<a class="menusmall2" href="?cont=long&id=<?=$idnum;?>&year=<?=$dati[0];?>&today=<?=$dati[2];?>&month=<?=$dati[1];?>"><FONT COLOR="#330099">Подробнее&nbsp;&raquo</a></FONT></TD>
+								<a class="menusmall2" href="?cont=long&id=<?=$idnum;?>&year=<?=$dati[0];?>&today=<?=$dati[2];?>&month=<?=$dati[1];?>"><FONT COLOR="#330099">РџРѕРґСЂРѕР±РЅРµРµ&nbsp;&raquo</a></FONT></TD>
 							</TR>
 						 </TABLE>
 					
@@ -197,13 +197,13 @@ if($dati[1] == "1" || $dati[1] == "01"){$months="января";}
 
 
 <?
- } if ($content=="") {echo "<CENTER><B>Новостей нет!</B></CENTER><BR>";}
+ } if ($content=="") {echo "<CENTER><B>РќРѕРІРѕСЃС‚РµР№ РЅРµС‚!</B></CENTER><BR>";}
 
 }
 elseif(isset($cont) && $cont=="long" && isset($id))
 {
 
-   echo "<!-- содержание новости -->";
+   echo "<!-- СЃРѕРґРµСЂР¶Р°РЅРёРµ РЅРѕРІРѕСЃС‚Рё -->";
               
 //page_url();
 
@@ -221,18 +221,18 @@ elseif(isset($cont) && $cont=="long" && isset($id))
     $dati=explode("-",$datum);
 
     $datun=explode("-",$datum);
-        if($datun[1] == "1" || $datun[1] == "01"){$month="января";}
-    elseif($datun[1] == "2" || $datun[1] == "02"){$month="февраля";}
-    elseif($datun[1] == "3" || $datun[1] == "03"){$month="марта";}
-    elseif($datun[1] == "4" || $datun[1] == "04"){$month="апреля";}
-    elseif($datun[1] == "5" || $datun[1] == "05"){$month="мая";}
-    elseif($datun[1] == "6" || $datun[1] == "06"){$month="июня";}
-    elseif($datun[1] == "7" || $datun[1] == "07"){$month="июля";}
-    elseif($datun[1] == "8" || $datun[1] == "08"){$month="августа";}
-    elseif($datun[1] == "9" || $datun[1] == "09"){$month="сентября";}
-    elseif($datun[1] == "10"){$month="октября";}
-    elseif($datun[1] == "11"){$month="ноября";}
-    elseif($datun[1] == "12"){$month="декабря";}
+        if($datun[1] == "1" || $datun[1] == "01"){$month="СЏРЅРІР°СЂСЏ";}
+    elseif($datun[1] == "2" || $datun[1] == "02"){$month="С„РµРІСЂР°Р»СЏ";}
+    elseif($datun[1] == "3" || $datun[1] == "03"){$month="РјР°СЂС‚Р°";}
+    elseif($datun[1] == "4" || $datun[1] == "04"){$month="Р°РїСЂРµР»СЏ";}
+    elseif($datun[1] == "5" || $datun[1] == "05"){$month="РјР°СЏ";}
+    elseif($datun[1] == "6" || $datun[1] == "06"){$month="РёСЋРЅСЏ";}
+    elseif($datun[1] == "7" || $datun[1] == "07"){$month="РёСЋР»СЏ";}
+    elseif($datun[1] == "8" || $datun[1] == "08"){$month="Р°РІРіСѓСЃС‚Р°";}
+    elseif($datun[1] == "9" || $datun[1] == "09"){$month="СЃРµРЅС‚СЏР±СЂСЏ";}
+    elseif($datun[1] == "10"){$month="РѕРєС‚СЏР±СЂСЏ";}
+    elseif($datun[1] == "11"){$month="РЅРѕСЏР±СЂСЏ";}
+    elseif($datun[1] == "12"){$month="РґРµРєР°Р±СЂСЏ";}
     ?>
       <TABLE width="100%" cellpadding="0" cellspacing="0">
 						 <TR>
@@ -255,11 +255,11 @@ elseif(isset($cont) && $cont=="long" && isset($id))
      if($id_back_rows > 0)
      {
        $id_back=mysql_result($rid_back, 0 ,"idnum");
-       echo "<td width=50%><a href=\"".$PHP_SELF."?cont=long&id=".$id_back."&year=".$dati[0]."&today=".$dati[2]."&month=".$dati[1]."\">&laquo; предыдущая новость</a></td>";
+       echo "<td width=50%><a href=\"".$PHP_SELF."?cont=long&id=".$id_back."&year=".$dati[0]."&today=".$dati[2]."&month=".$dati[1]."\">&laquo; РїСЂРµРґС‹РґСѓС‰Р°СЏ РЅРѕРІРѕСЃС‚СЊ</a></td>";
      }
       else
      {
-       echo "<td width=50% style=\"color: gray;\">&laquo; предыдущая новость</td>";
+       echo "<td width=50% style=\"color: gray;\">&laquo; РїСЂРµРґС‹РґСѓС‰Р°СЏ РЅРѕРІРѕСЃС‚СЊ</td>";
      }
 
      $rid_next = mysql_query("select * from ".$table_dnp_news." where idnum > '".$id."' order by idnum limit 1 ");
@@ -267,14 +267,14 @@ elseif(isset($cont) && $cont=="long" && isset($id))
      if($id_back_rows > 0)
      {
        $id_next=mysql_result($rid_next,0,"idnum");
-       echo "<td width=50% align=right><a href=\"".$PHP_SELF."?cont=long&id=".$id_next."&year=".$dati[0]."&today=".$dati[2]."&month=".$dati[1]."\">следующая новость &raquo;</a></td>";
+       echo "<td width=50% align=right><a href=\"".$PHP_SELF."?cont=long&id=".$id_next."&year=".$dati[0]."&today=".$dati[2]."&month=".$dati[1]."\">СЃР»РµРґСѓСЋС‰Р°СЏ РЅРѕРІРѕСЃС‚СЊ &raquo;</a></td>";
      }
      else
      {
-       echo "<td width=50% align=right style=\"color: gray;\">следующая новость &raquo;</td>";
+       echo "<td width=50% align=right style=\"color: gray;\">СЃР»РµРґСѓСЋС‰Р°СЏ РЅРѕРІРѕСЃС‚СЊ &raquo;</td>";
      }*/
      
-     echo "<a class=menusmall2 href=\"javascript:history.back(2);\">&laquo; назад</a><BR>";
+     echo "<a class=menusmall2 href=\"javascript:history.back(2);\">&laquo; РЅР°Р·Р°Рґ</a><BR>";
      
 	 ?>
         

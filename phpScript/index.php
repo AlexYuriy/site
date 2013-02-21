@@ -1,7 +1,7 @@
 <html>
 <head>
-<title>Скрипты</title>
-<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<title>РЎРєСЂРёРїС‚С‹</title>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
 <style type=text/css rel=stylesheet>
 .menu {
 	color: #2C3251;
@@ -104,25 +104,25 @@
 	<table width="100%" align="">
     
 	<tr>
-	<td width="100%" align="center" bgcolor="#DDECEE" class="menu"><div align="center"><strong>Скрипт "Афоризмы"</strong></div></td>
+	<td width="100%" align="center" bgcolor="#DDECEE" class="menu"><div align="center"><strong>РЎРєСЂРёРїС‚ "РђС„РѕСЂРёР·РјС‹"</strong></div></td>
     </tr><tr>
 	<td class="menusmall2">
-	Скрипт собственной разработки, использует MySql, высокая скорость работы даже при огромном количестве афоризмов.<BR>
-	Включается-выключается возможность добавления афоризмов с главной страницы.<BR>
-	В администраторком модуле есть конвертор из текстового(CVS) формата в MySQL.
+	РЎРєСЂРёРїС‚ СЃРѕР±СЃС‚РІРµРЅРЅРѕР№ СЂР°Р·СЂР°Р±РѕС‚РєРё, РёСЃРїРѕР»СЊР·СѓРµС‚ MySql, РІС‹СЃРѕРєР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ СЂР°Р±РѕС‚С‹ РґР°Р¶Рµ РїСЂРё РѕРіСЂРѕРјРЅРѕРј РєРѕР»РёС‡РµСЃС‚РІРµ Р°С„РѕСЂРёР·РјРѕРІ.<BR>
+	Р’РєР»СЋС‡Р°РµС‚СЃСЏ-РІС‹РєР»СЋС‡Р°РµС‚СЃСЏ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РґРѕР±Р°РІР»РµРЅРёСЏ Р°С„РѕСЂРёР·РјРѕРІ СЃ РіР»Р°РІРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹.<BR>
+	Р’ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂРєРѕРј РјРѕРґСѓР»Рµ РµСЃС‚СЊ РєРѕРЅРІРµСЂС‚РѕСЂ РёР· С‚РµРєСЃС‚РѕРІРѕРіРѕ(CVS) С„РѕСЂРјР°С‚Р° РІ MySQL.
 	<BR><BR>
 	</td>
 	</tr>
 
 	<tr>
-	<td width="100%" align="center" bgcolor="#DDECEE" class="menu"><div align="center"><strong>Скрипт "Календарь новостей и событий"</strong></div></td>
+	<td width="100%" align="center" bgcolor="#DDECEE" class="menu"><div align="center"><strong>РЎРєСЂРёРїС‚ "РљР°Р»РµРЅРґР°СЂСЊ РЅРѕРІРѕСЃС‚РµР№ Рё СЃРѕР±С‹С‚РёР№"</strong></div></td>
     </tr><tr>
 	<td class="menusmall2">
-	Переработанный скрипт Козырева Олега - www.oleg.estetika.net ( Большое спасибо ему! )<BR>
-	Новостная лента с календарем «DnP NEWS SQL 3.2 + Kalendar»<P>
+	РџРµСЂРµСЂР°Р±РѕС‚Р°РЅРЅС‹Р№ СЃРєСЂРёРїС‚ РљРѕР·С‹СЂРµРІР° РћР»РµРіР° - www.oleg.estetika.net ( Р‘РѕР»СЊС€РѕРµ СЃРїР°СЃРёР±Рѕ РµРјСѓ! )<BR>
+	РќРѕРІРѕСЃС‚РЅР°СЏ Р»РµРЅС‚Р° СЃ РєР°Р»РµРЅРґР°СЂРµРј В«DnP NEWS SQL 3.2 + KalendarВ»<P>
  
-	Теперь это не Новостная лента с календарем, а Календарь новостей и событий.<BR>
-	Встраивается в главную страницу сайта.<BR><BR>
+	РўРµРїРµСЂСЊ СЌС‚Рѕ РЅРµ РќРѕРІРѕСЃС‚РЅР°СЏ Р»РµРЅС‚Р° СЃ РєР°Р»РµРЅРґР°СЂРµРј, Р° РљР°Р»РµРЅРґР°СЂСЊ РЅРѕРІРѕСЃС‚РµР№ Рё СЃРѕР±С‹С‚РёР№.<BR>
+	Р’СЃС‚СЂР°РёРІР°РµС‚СЃСЏ РІ РіР»Р°РІРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ СЃР°Р№С‚Р°.<BR><BR>
 	<? include("news.php"); ?>
 	</td>
 	</tr>
@@ -130,7 +130,7 @@
 	</table>
 	</td>
     <td valign="top" class="menusmall2"><table width="178" align="">
-      <tr><td width="178" align="center" bgcolor="#DDECEE" class="menu"><div align="center"><strong>Календарь новостей</strong></div></td>
+      <tr><td width="178" align="center" bgcolor="#DDECEE" class="menu"><div align="center"><strong>РљР°Р»РµРЅРґР°СЂСЊ РЅРѕРІРѕСЃС‚РµР№</strong></div></td>
     </tr><tr>
 	<td>
 	<? include("calend.php"); ?>

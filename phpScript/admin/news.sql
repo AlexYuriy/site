@@ -2,18 +2,18 @@
 -- version 2.6.0-alpha2
 -- http://www.phpmyadmin.net
 -- 
--- Хост: localhost
--- Время создания: Апр 21 2005 г., 11:54
--- Версия сервера: 4.1.9
--- Версия PHP: 5.0.4
+-- РҐРѕСЃС‚: localhost
+-- Р’СЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ: РђРїСЂ 21 2005 Рі., 11:54
+-- Р’РµСЂСЃРёСЏ СЃРµСЂРІРµСЂР°: 4.1.9
+-- Р’РµСЂСЃРёСЏ PHP: 5.0.4
 -- 
--- БД : `news`
+-- Р‘Р” : `news`
 -- 
 
 -- --------------------------------------------------------
 
 -- 
--- Структура таблицы `dnp_long_news`
+-- РЎС‚СЂСѓРєС‚СѓСЂР° С‚Р°Р±Р»РёС†С‹ `dnp_long_news`
 -- 
 
 CREATE TABLE `dnp_long_news` (
@@ -32,7 +32,7 @@ CREATE TABLE `dnp_long_news` (
 ) ENGINE=MyISAM AUTO_INCREMENT=53 ;
 
 -- 
--- Дамп данных таблицы `dnp_long_news`
+-- Р”Р°РјРї РґР°РЅРЅС‹С… С‚Р°Р±Р»РёС†С‹ `dnp_long_news`
 -- 
 
 INSERT INTO `dnp_long_news` VALUES (52, '18:59', '2005-04-15', 1113523200, 'SKRIPT', 'Novosti s kalendarem', 'on', '192.168.5.51::', 1115078400, 'on', 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; igorv)');
@@ -40,7 +40,7 @@ INSERT INTO `dnp_long_news` VALUES (52, '18:59', '2005-04-15', 1113523200, 'SKRI
 -- --------------------------------------------------------
 
 -- 
--- Структура таблицы `users`
+-- РЎС‚СЂСѓРєС‚СѓСЂР° С‚Р°Р±Р»РёС†С‹ `users`
 -- 
 
 CREATE TABLE `users` (
@@ -57,7 +57,7 @@ CREATE TABLE `users` (
 ) ENGINE=MyISAM AUTO_INCREMENT=26 ;
 
 -- 
--- Дамп данных таблицы `users`
+-- Р”Р°РјРї РґР°РЅРЅС‹С… С‚Р°Р±Р»РёС†С‹ `users`
 -- 
 
 INSERT INTO `users` VALUES (1, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'User', '1', '', '', '', '0000-00-00');
