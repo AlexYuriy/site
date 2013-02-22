@@ -79,7 +79,7 @@ $sql_date = $year."-".$month."-".$today;
 
 
 $results = mysql_query("select * from $table_dnp_news where actuals!=''");
-while ($rowss = mysql_fetch_array($results)){
+/*while ($rowss = mysql_fetch_array($results)){
 $content_actual=$rowss["content"];
 $title_actual=$rowss["title"];
 $datum_actual=$rowss["datum"];
@@ -101,13 +101,13 @@ if ($loc_date < $num_actual and $act_status=="on"){ ?>
  
  
 					<?}
-}
+}*/
 
 if($now_today==$today && $now_month==$month && $now_year==$year && $start_news == "on")
 { 
  //echo "1 act_status=$act_status loc_date=$loc_date num_actual=$num_ start_news=$start_news local_date=$local_date<BR>";
  //$result = mysql_query("select * from ".$table_dnp_news." where x_datum <= '$loc_date' and  act_status!='on' order by datum desc, time desc limit ".$news_num." ");
- $result = mysql_query("SELECT * FROM ".$table_dnp_news." WHERE idnum > 5 LIMIT 10");
+ $result = mysql_query("SELECT * FROM ".$table_dnp_news." WHERE act_status='on' and idnum > 5 LIMIT 10");
  $rows = mysql_num_rows($result);
 }
 else
@@ -126,7 +126,7 @@ $rows = mysql_num_rows($result);
        */
 	   
 	{
-	$result = mysql_query("SELECT * FROM ".$table_dnp_news." WHERE idnum > 5 LIMIT 10"); 
+	$result = mysql_query("SELECT * FROM ".$table_dnp_news." WHERE act_status='on' and idnum > 5 LIMIT 10"); 
 	$rows = mysql_num_rows($result);
 	}
 	   

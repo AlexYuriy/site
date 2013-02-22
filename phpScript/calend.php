@@ -1,5 +1,5 @@
 ﻿<style type="text/css">
-      <? include "./phpScript/style.css" ?>
+      <? include "./phpScript/css/style.css" ?>
   </style>
 
 	  <?
@@ -68,18 +68,18 @@ $last_year = $year - 1;
 $next_month = $month + 1;
 $last_month = $month - 1;
 if ($today > $numdays) { $today--; }
-        if($month == "1" ){$month_ru="январь";}
-    elseif($month == "2" ){$month_ru="февраль";}
-    elseif($month == "3" ){$month_ru="март";}
-    elseif($month == "4" ){$month_ru="апрель";}
-    elseif($month == "5" ){$month_ru="май";}
-    elseif($month == "6" ){$month_ru="июнь";}
-    elseif($month == "7" ){$month_ru="июль";}
-    elseif($month == "8" ){$month_ru="август";}
-    elseif($month == "9" ){$month_ru="сентябрь";}
-    elseif($month == "10"){$month_ru="октябрь";}
-    elseif($month == "11"){$month_ru="ноябрь";}
-    elseif($month == "12"){$month_ru="декабрь";}
+        if($month == "1" ){$month_ru="Январь";}
+    elseif($month == "2" ){$month_ru="Февраль";}
+    elseif($month == "3" ){$month_ru="Март";}
+    elseif($month == "4" ){$month_ru="Апрель";}
+    elseif($month == "5" ){$month_ru="Май";}
+    elseif($month == "6" ){$month_ru="Июнь";}
+    elseif($month == "7" ){$month_ru="Июль";}
+    elseif($month == "8" ){$month_ru="Август";}
+    elseif($month == "9" ){$month_ru="Сентябрь";}
+    elseif($month == "10"){$month_ru="Октябрь";}
+    elseif($month == "11"){$month_ru="Ноябрь";}
+    elseif($month == "12"){$month_ru="Декабрь";}
 //echo $month;
 //echo $dayone;
 
@@ -90,10 +90,10 @@ if(checkdate($month,29,$year) && $month==2) {
    $dayone=7;
    }
 ?>
-<table border=0 cellpadding=4 cellspacing=1 width=170>
+<!--table border=0 cellpadding=4 cellspacing=1 width=170>
 
 <!-- выводим название года -->
-<tr bgcolor=#E7EBEF class=menusmall>
+<!--tr bgcolor=#E7EBEF class=menusmall>
       <td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$last_year;?>&today=<?=$today;?>&month=<?=$month;?>">&laquo;&laquo;</a></td>
 <td class="menusmall" colspan="5" valign="middle" align="center">
       <b ><?=$year;?> г.</b></td>
@@ -106,7 +106,7 @@ if(checkdate($month,29,$year) && $month==2) {
      <td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$year?>&today=<?=$today;?>&month=<?=$last_month;?>">&laquo;&laquo;</a></td>
 <td class="cellbg" colspan="5" valign="middle" align="center">
       <b><?=$month_ru;?></b></td>
-<td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$year;?>&today=<?=$today;?>&month=<?=$next_month;?>">&raquo;&raquo;</a></td>
+<td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$year;?>&today=<?=0;?>&month=<?=$next_month;?>">&raquo;&raquo;</a></td>
 </tr></table>
 
 <table border=0 cellpadding=2 cellspacing=1 width=170><tr>
@@ -135,12 +135,13 @@ for ($zz = 1; $zz <= $numdays; $zz++) {
   </tr><tr><? $i=0; }
 
           $news_date = $year."-".$month."-".$zz;
-          $news_result = mysql_query("select * from ".$table_dnp_news." where datum = '".$news_date."' and act_status!='on'");
+          $news_result = mysql_query("select * from ".$table_dnp_news." where datum = '".$news_date."'");// and act_status!='on'");
           $news_rows = mysql_num_rows($news_result);
-          if(($news_rows >0)||($zz == $today)) {?>
+          if(($news_rows >0)||(($zz == $today))&&($now_year==$year)&&($now_month==$month) ) {?>
 		  <td id="point_true" class=menusmall>
-		  <a class=menusmall3 href="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a>
-           <?}
+		  <!--a class=menusmall3 href="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a-->
+          <a class=menusmall3 href="<?="main.php";?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a> 
+		   <?}
           else {
 		 ?>
 		<td id="point_false" class=menusmall>
