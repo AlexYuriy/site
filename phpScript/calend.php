@@ -1,5 +1,5 @@
 ﻿<style type="text/css">
-      <? include "./phpScript/style.css" ?>
+      <? include "./phpScript/css/style.css" ?>
   </style>
 
 	  <?
