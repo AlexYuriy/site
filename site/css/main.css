@@ -1,7 +1,10 @@
+
+
 #mainmenucss {
 color: #070707;
 background: url("../images/logo_center2.jpg")  100%;
-font-size: 30px;
+font-size: 23px;
+font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
 #mainmenucss a:link
@@ -19,32 +22,63 @@ color: #070707;
 
 
 #topmenucss {
-background: url("../images/logo_top2.jpg") no-repeat;
+
 font-size: 15pt;
-color: #005880;
+font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+color: #015885;
+height: 40px;
+ padding: 25px;
 }
 
 #topmenucss a:link, #topmenucss a:visited {
-color: #005880;
+color: #43859D;
 text-decoration: none;
 }
 
-
-#topmenucss li {
-	list-style: none;
-	float : right;
-}
-
-
 	
-#contentcss {
+#contentcss, p, a:visited  {
 
-background: url(../images/left.jpg) no-repeat;
-vertical-align: top;
- padding: 10px;
+
+font-size: 10pt;
+font-family : Verdana;
+ padding: 5px;
 color: #005880;
+height: 70px;
+
 }
 
+
+.menusmall3 td{
+    font-size : 8pt;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #333366;
+}
+
+.menusmall3 A {
+	text-decoration : none;
+	color : #000033;
+}
+
+.menusmall3 A:HOVER, A:FOCUS {
+	text-decoration : none;
+	color : #0000CC;
+}
+
+.menusmall td{
+    font-size : 8pt;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #333366;
+}
+
+.menusmall A {
+	text-decoration : none;
+	color : #000033;
+}
+
+.menusmall A:HOVER, A:FOCUS {
+	text-decoration : none;
+	color : #0000CC;
+}
 /*
 #content {
 	background: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);

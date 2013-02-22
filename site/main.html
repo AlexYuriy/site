@@ -4,32 +4,31 @@
 -->
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <base href="http://istochnik-spb.ru.host1245282.serv18.hostland.ru/main.php">
-  <!--
+ <!-- <base href="http://istochnik-spb.com/main.php">
+  -->
  <base href=".">
- -->
+ 
 <!-- 
  <meta name="robots" content="index, follow">
 -->
  <title>главная</title>
+
+
 <link rel="stylesheet" href="./css/main.css" type="text/css">
 </head>
 
-<body>
+<body font= "Arial">
 
 	<table  align="center" border="0" width="950" cellspacing="0"  height="100%">
-		<tr height="160"  background="./images/logo_top1.jpg">
-			<td colspan="3" ></td>
-		</tr>
-		<tr id="topmenucss" >
-			<td  colspan="3"   >
-				<ul>
-					<li class=""><a href=" fghfghfg"> english </a></li>
-					<li class=""> &nbsp; | &nbsp; </li>
-					<li class="item-470"><a href="http://www.ustream.tv/channel/istochnik">Прямая трансляция </a></li>
-				</ul>
+		<tr height="210px"  background="./images/logo_top.jpg">
+			<td  colspan="3"  align="right" valign="bottom" id="topmenucss">
+				<a href="http://www.ustream.tv/channel/istochnik">прямая трансляция </a>
+				 &nbsp; | &nbsp; 				
+				<a href=" fghfghfg"> english </a>
+				&nbsp; 			
 			</td>
 		</tr>
+
 		<tr height="13" background="./images/logo_center1.jpg">
 			<td  colspan="3"   >
 			</td>
@@ -57,18 +56,26 @@
 		<tr>
 			<td height="6" colspan="3"></td>
 		</tr>
-		<tr valign = "top">
-			<td id="contentcss" width="70%" >
+		<tr   >
+			<td background= "./images/left.jpg" "repeat" id="contentcss" width="80%" >
 				<h1>НОВОСТИ	</h1>
-					<? include("./phpScript/news.php"); ?>
 			</td>
-			<td width="6"> </td>
-			<td id="contentcss" >
-				богослужения: <br>
-				Воскресенье с 11:00 <br>
-				Четверг с 19:00 <br><br>
-				Календарь событий:<? include("./phpScript/calend.php"); ?> 
+			<td width="6px"> </td>
+			<td background= "./images/left.jpg" "repeat" id="contentcss" >
+				<b>Богослужения: <br>
+				Воскресенье с <font size="3">11</font>:00 <br>
+				Четверг с <font size="3">19</font>:00 
+				</b>
 			</td>
+		</tr>
+		<tr valign="top">
+			<td><? include("./phpScript/news.php"); ?></td>
+			<td width="6px"> </td>
+			<td id="contentcss">Календарь событий:<? include("./phpScript/calend.php"); ?> 
+			<p align="right">
+				<br><a href="http://www.ustream.tv/channel/istochnik">прямая трансляция </a>
+				<br><a href="http://www.ustream.tv/channel/istochnik">в контакте </a> 
+				</p></td>
 		</tr>
 	</table>
 </div>

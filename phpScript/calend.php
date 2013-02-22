@@ -144,23 +144,23 @@ for ($zz = 1; $zz <= $numdays; $zz++) {
            }?>
        </td>
   <?}
-  else {?>
-    <td valign="middle" align="center" class=menusmall bgcolor=#EBF2F5>
-	<?
+  else {
+
           $news_date = $year."-".$month."-".$zz;
-          
-		  
-		  
+          		  
 		  $news_result = mysql_query("select * from ".$table_dnp_news." where datum = '".$news_date."' and act_status!='on'");
           $news_rows = mysql_num_rows($news_result);
           if($news_rows >0) {?>
-		  <a class=menusmall3 href="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a>
+			<td valign="middle" align="center" class=menusmall bgcolor=#055A81>
+			<a class=menusmall3 href="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a>
           <?}
           else {
+		  		?>
+				<td valign="middle" align="center" class=menusmall bgcolor=#EBF2F5>
+				<?
            echo $zz;
-           }?>
-		   </td>
-<?
+           }
+		   ?></td><?
   }
 
   $i++;

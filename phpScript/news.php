@@ -105,8 +105,11 @@ if ($loc_date < $num_actual and $act_status=="on"){ ?>
 if($now_today==$today && $now_month==$month && $now_year==$year && $start_news == "on")
 { 
  //echo "1 act_status=$act_status loc_date=$loc_date num_actual=$num_ start_news=$start_news local_date=$local_date<BR>";
- $result = mysql_query("select * from ".$table_dnp_news." where x_datum <= '$loc_date' and  act_status!='on' order by datum desc, time desc limit ".$news_num." ");
+ //SELECT * FROM users WHERE id > 5 LIMIT 10
+ //$result = mysql_query("select * from ".$table_dnp_news." where x_datum <= '$loc_date' and  act_status!='on' order by datum desc, time desc limit ".$news_num." ");
+ $result = mysql_query("SELECT * FROM ".$table_dnp_news." WHERE idnum > 5 LIMIT 5");
  $rows = mysql_num_rows($result);
+ 
 }
 else
 {//echo "2 act_status=$act_status loc_date=$loc_date num_actual=$num_ start_news=$start_news local_date=$local_date<BR>";
@@ -172,7 +175,7 @@ if($dati[1] == "1" || $dati[1] == "01"){$months="января";}
 						 </TR>
 							<TR><!-- <a class="menusmall2" href="<? rewr_url();?>"><FONT COLOR="#330099">Подробнее&nbsp;&raquo</a> -->
 						 		<TD  colspan="2" class="menusmall">&nbsp;&nbsp;<?=$name;?><BR>
-								<a class="menusmall2" href="?cont=long&id=<?=$idnum;?>&year=<?=$dati[0];?>&today=<?=$dati[2];?>&month=<?=$dati[1];?>"><FONT COLOR="#330099">Подробнее&nbsp;&raquo</a></FONT></TD>
+								<a class="menusmall2" href="<?=$_SERVER['PHP_SELF'];?>?cont=long&id=<?=$idnum;?>&year=<?=$dati[0];?>&today=<?=$dati[2];?>&month=<?=$dati[1];?>"><FONT COLOR="#330099">Подробнее&nbsp;&raquo</a></FONT></TD>
 							</TR>
 						 </TABLE>
 					
@@ -206,7 +209,7 @@ elseif(isset($cont) && $cont=="long" && isset($id))
    echo "<!-- содержание новости -->";
               
 //page_url();
-
+   
    $result = mysql_query("select * from ".$table_dnp_news." where idnum='".$id."'  limit 1");
    $rows = mysql_num_rows($result);
 
