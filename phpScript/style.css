@@ -96,3 +96,8 @@ vertical-align: middle;
 TEXT-ALIGN: center;
 BACKGROUND-COLOR: #EBF2F5
 }
+#point_empty{
+vertical-align: middle;
+TEXT-ALIGN: center;
+BACKGROUND-COLOR: #000000
+}

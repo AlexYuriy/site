@@ -1,5 +1,5 @@
 body  	{ 	
-		background: #232323 url(images/bg.png) repeat;
+		background: #232323 url(../images/bg.png) repeat;
 		margin: 0;
 		padding: 0;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -20,7 +20,7 @@ header, nav, article, section, aside, footer, address
 		max-width: 960px;
 		min-width: 600px;
 		min-height: 600px;
-		background: url(images/bg-light.png) no-repeat;
+		background: url(../images/bg-light.png) no-repeat;
 		background-size:  100%;
 	}
 		
@@ -87,7 +87,7 @@ p.credit
 		border: none;
 		max-width: 99%;
 		height: 2px;
-		background: url(images/divider.png) 100%;
+		background: url(/images/divider.png) 100%;
 		margin: 10px;
 	}
 
@@ -101,7 +101,7 @@ p.credit
 		height: 120px;
 		margin: 10px;
 
-		background: url(images/progress-container.png) no-repeat;
+		background: url(/images/progress-container.png) no-repeat;
 		background-size:  100% 109px ;
 	}
 
@@ -112,7 +112,7 @@ p.credit
 		top: 15px;
 		left: 10px;
 		height: 43px;
-		background: #72dbf1 url(images/progress-bar.png) repeat-x;
+		background: #72dbf1 url(/images/progress-bar.png) repeat-x;
 		background-size:  100% 109px ;
 		
 		position: relative;

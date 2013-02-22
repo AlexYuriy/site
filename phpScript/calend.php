@@ -124,7 +124,7 @@ foreach($alldays as $value) { ?>
 <?
 if ($dayone == 0) {$dayone=7;}
 for ($i = 0; $i < ($dayone-1); $i++) {?>
-  <td valign="middle" align="center" class=menusmall >&nbsp;</td>
+  <td id="point_empty" class=menusmall >&nbsp;</td>
 <?}?>
 
 
