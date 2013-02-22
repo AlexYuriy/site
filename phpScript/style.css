@@ -18,7 +18,6 @@
 	COLOR: #002244;
 	LINE-HEIGHT: 14px;
 	FONT-FAMILY: verdana, arial, helvetica, sans serif;
-	TEXT-DECORATION: none
 }
 .menusmall:hover {
 	FONT-WEIGHT: 300;
@@ -86,3 +85,14 @@
 	border-color:black;}
 
 
+#point_true {
+vertical-align: middle;
+TEXT-ALIGN: center;
+BACKGROUND-COLOR: #BECCDE
+}
+
+#point_false{
+vertical-align: middle;
+TEXT-ALIGN: center;
+BACKGROUND-COLOR: #EBF2F5
+}

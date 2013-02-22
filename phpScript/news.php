@@ -1,4 +1,5 @@
-﻿<?php 
+﻿
+<?php 
 $now_month = date("n",time());
 $now_year  = date("Y",time());
 $now_today = date("j", time());
@@ -126,12 +127,12 @@ $rows = mysql_num_rows($result);
 	   
 	{
 	$result = mysql_query("SELECT * FROM ".$table_dnp_news." WHERE idnum > 5 LIMIT 10"); 
-	 $rows = mysql_num_rows($result);
+	$rows = mysql_num_rows($result);
 	}
 	   
  
 
-for($k=0;$k < $rows;$k++)
+for($k=$rows-1;$k >= 0;$k--)
    {
     $idn=mysql_result($result, $k , "idnum");
     $content=mysql_result($result, $k , "content");
