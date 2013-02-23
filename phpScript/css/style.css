@@ -5,28 +5,14 @@
 	font-weight: 295;
 	text-decoration: none;
 }
-.menu:hover {
-	color: #F5FFFA;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	font-weight: 295;
-	text-decoration: none;
-}
+
 .menusmall {
 	FONT-WEIGHT: 300;
 	FONT-SIZE: 11px;
-	COLOR: #002244;
 	LINE-HEIGHT: 14px;
 	FONT-FAMILY: verdana, arial, helvetica, sans serif;
 }
-.menusmall:hover {
-	FONT-WEIGHT: 300;
-	FONT-SIZE: 11px;
-	COLOR: #ffffff;
-	LINE-HEIGHT: 14px;
-	FONT-FAMILY: verdana, arial, helvetica, sans serif;
-	TEXT-DECORATION: none
-}
+
 .menusmall2 {
 	FONT-WEIGHT: 300;
 	FONT-SIZE: 11px;
@@ -35,30 +21,18 @@
 	FONT-FAMILY: verdana, arial, helvetica, sans serif;
 	TEXT-DECORATION: none
 }
-.menusmall2:hover {
-	FONT-WEIGHT: 300;
-	FONT-SIZE: 11px;
-	COLOR: #3300CC;
-	LINE-HEIGHT: 14px;
-	FONT-FAMILY: verdana, arial, helvetica, sans serif;
-	TEXT-DECORATION: none
+
+.menusmall3 td{
+    font-size : 8pt;
+	font-family : Verdana;
+	color : #333366;
 }
-.menusmall3 {
-	FONT-WEIGHT: 300;
-	FONT-SIZE: 11px;
-	COLOR: #9900CC;
-	LINE-HEIGHT: 14px;
-	FONT-FAMILY: verdana, arial, helvetica, sans serif;
-	TEXT-DECORATION: underline;
+.menusmall3 A, .menusmall3 A:visited  {
+	text-decoration : none;
+	color : #000033;
 }
-.menusmall3:hover {
-	FONT-WEIGHT: 300;
-	FONT-SIZE: 11px;
-	COLOR: #3300CC;
-	LINE-HEIGHT: 14px;
-	FONT-FAMILY: verdana, arial, helvetica, sans serif;
-	TEXT-DECORATION: underline;
-}
+
+
 .smallnews {
 	FONT-WEIGHT: 300;
 	FONT-SIZE: 9px;
@@ -82,22 +56,26 @@
 	FONT-SIZE: 12pt;
 	MARGIN-TOP: 0px;
 	TEXT-ALIGN: center;
-	border-color:black;}
+	border-color:black;
+	}
 
 
-#point_true {
+#point_true , #point_true  a{
 vertical-align: middle;
 TEXT-ALIGN: center;
-BACKGROUND-COLOR: #BECCDE
+color: #FFFFFF;
+BACKGROUND-COLOR: #055A81;
+text-decoration: none;
 }
 
 #point_false{
 vertical-align: middle;
 TEXT-ALIGN: center;
-BACKGROUND-COLOR: #EBF2F5
+color: #FFFFFF;
+BACKGROUND-COLOR: #028AC8
 }
 #point_empty{
 vertical-align: middle;
 TEXT-ALIGN: center;
-BACKGROUND-COLOR: #000000
+BACKGROUND-COLOR: #FEFEFE	
 }
