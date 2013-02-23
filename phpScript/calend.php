@@ -103,7 +103,7 @@ if(checkdate($month,29,$year) && $month==2) {
 <!-- //выводим название месяца -->
 <table border=0 cellpadding=4 cellspacing=1 width=170>
 <tr bgcolor=#E7EBEF class=menusmall >
-     <td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$year?>&today=<?=$today;?>&month=<?=$last_month;?>">&laquo;&laquo;</a></td>
+     <td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$year?>&today=<?=0;?>&month=<?=$last_month;?>">&laquo;&laquo;</a></td>
 <td class="cellbg" colspan="5" valign="middle" align="center">
       <b><?=$month_ru;?></b></td>
 <td align=center class=menusmall><a class=menusmall2 href="<?=$PHP_SELF;?>?year=<?=$year;?>&today=<?=0;?>&month=<?=$next_month;?>">&raquo;&raquo;</a></td>
@@ -133,11 +133,17 @@ for ($i = 0; $i < ($dayone-1); $i++) {?>
 for ($zz = 1; $zz <= $numdays; $zz++) {
   if ($i >= 7) { ?>
   </tr><tr><? $i=0; }
-
+			
           $news_date = $year."-".$month."-".$zz;
           $news_result = mysql_query("select * from ".$table_dnp_news." where datum = '".$news_date."'");// and act_status!='on'");
           $news_rows = mysql_num_rows($news_result);
-          if(($news_rows >0)||(($zz == $today))&&($now_year==$year)&&($now_month==$month) ) {?>
+		  		if(($zz == $today)&&($now_year==$year)&&($now_month==$month) ) {?>
+		  <td id="point_today" class=menusmall>
+		  <!--a class=menusmall3 href="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a-->
+          <a class=menusmall3 href="<?="main.php";?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a> 
+		   <?}
+          else {if(($news_rows >0)||(($zz == $today)&&($now_year==$year)&&($now_month==$month))) {
+		  ?>
 		  <td id="point_true" class=menusmall>
 		  <!--a class=menusmall3 href="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a-->
           <a class=menusmall3 href="<?="main.php";?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a> 
@@ -149,7 +155,8 @@ for ($zz = 1; $zz <= $numdays; $zz++) {
            echo $zz;
            }?>
        </td>
-  <?
+	   
+  <?}
   $i++;
 }
 
