@@ -22,6 +22,7 @@
 			<? include ("calend.php") ?>
 		</tr>
 	</table>
+	<? include ("down.php") ?>
 </body></html>	
  
  

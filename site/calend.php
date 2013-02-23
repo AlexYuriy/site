@@ -1,6 +1,6 @@
 			<td width="6px"> </td>
-			<td>
-				<a id="baner"> Календарь событий: </a>
+			<td >
+				<div id="baner">Календарь событий: </div>
 					<? include("./phpScript/calend.php"); ?> 
 				<div id="baner">
 				<p><a href="video.php">прямая трансляция </a></p>

@@ -15,7 +15,7 @@
 						
 			<section class="progress">
 
-				<article class="progress-bar" style="width:14%" title="12% Complete" ></article> 
+				<article class="progress-bar" style="width:36%" title="36% Complete" ></article> 
 			</section>
 			<p class="credit">Template by MLP</p>
 		</div>

@@ -1,6 +1,6 @@
 
 #topmenucss {
-
+background: url("/images/logo_top.jpg") no-repeat;
 font-size: 15pt;
 font-family : Verdana;
 color: #015885;
@@ -35,23 +35,34 @@ color: #070707;
 
 
 	
-#contentcss  {
+#contentcss , #contentcss a, #contentcss p {
 
-
-font-size: 10pt;
+font-size: 12pt;
 font-family : Verdana;
- padding: 5px;
-color: #005880;
-height: 70px;
-
+padding-left: 10px;
+color: #005080;
+text-decoration: none;
 }
 
-#baner p, #baner a {
+#baner a {
 text-align: right;
 font-size: 12pt;
 font-family : Verdana;
-color: #015885;
+color: #005880;
+position: static;
+} 
 
+#baner , #baner p {
+text-align: left;
+font-size: 12pt;
+font-family : Verdana;
+color: #005880;
+position: static;
+}
+
+.switchcontent 
+{
+	padding-left: 15px;
 }
 
 /*
@@ -97,7 +108,7 @@ color: #015885;
 	background: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
 	background-repeat: no-repeat;
 	padding-top: ;
-    float: left; /* Обтекание по правому краю */
+    float: left; /* Обтекание по правому краю 
     width: 26%; /* Ширина 
 	padding-left: 1%;
 	border-left: 4%;

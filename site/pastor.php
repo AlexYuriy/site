@@ -1,0 +1,38 @@
+
+<html><head>
+<? include ("meta.html") ?>
+ <title> Пастор </title>
+ </head>
+ 
+ <body>
+ 	<table  align="center" border="0" width="950" cellspacing="0" >
+	<? include ("head.html") ?>
+		<tr>
+			<td background= "images/left.jpg" id="contentcss" width="80%" >
+				<h1>О пасторе</h1>
+
+
+			</td>
+			<? include ("baner.html") ?>
+		</tr>
+		<tr valign="top">
+			<td>
+				<a id="contentcss">
+				<h3>Пастор Котов Михаил и жена Котова Лия.</h3>
+				<center><image href="" height="200" width="600"></center>
+				
+			</a></td>
+			<? include ("calend.php") ?>
+		</tr>
+		<tr><td colspan="3" id="contentcss">
+			<a >
+			<p><b>Биография:</b><br>
+				Пастор Михаил Котов родился 10 августа 1983г. в Тарту, Эстония. Он рос в верующей семье. <br>
+				В 1977, когда ему было 14 лет, Бог призвал его на служение. С того времени он путешествовал  вместе со служенителем Божьим Александром Поповым по СССР.<br>
+				В 1989 - Господь призвал его в Санкт-Петербург(Ленинград), где пастор Михаил основал церковь "Источник Жизни". На сегодняшний церковь насчитывает около 800 прихожан.</p>
+			</a>
+		</td></tr>
+	</table>
+			
+	<? include ("down.php") ?>
+</body></html>	
