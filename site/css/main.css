@@ -1,10 +1,17 @@
+#logo
+{
 
+	position: relative;
+	left: 5px;
+	text-align: left;
+	
+}
 #topmenucss {
-background: url("/images/logo_top.jpg") no-repeat;
+background: url("images/logo_top.jpg") ;
 font-size: 15pt;
 font-family : Verdana;
 color: #015885;
-padding: 25px;
+padding: 5px;
 }
 
 #topmenucss a:link, #topmenucss a:visited {

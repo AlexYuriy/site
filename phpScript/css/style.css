@@ -1,9 +1,9 @@
 .menu {
-	color: #2C3251;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	font-weight: 295;
-	text-decoration: none;
+font-size: 12pt;
+font-family : Verdana;
+padding-left: 10px;
+color: #005080;
+text-decoration: none;
 }
 
 .menusmall {
@@ -78,4 +78,9 @@ BACKGROUND-COLOR: #028AC8
 vertical-align: middle;
 TEXT-ALIGN: center;
 BACKGROUND-COLOR: #FEFEFE	
+}
+#point_today{
+vertical-align: middle;
+TEXT-ALIGN: center;
+BACKGROUND-COLOR: #000000	
 }

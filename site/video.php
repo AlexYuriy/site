@@ -6,7 +6,7 @@
  </head>
  
  <body font= "Arial">
- 	<table  align="center" border="0" width="950" cellspacing="0"  height="100%">
+ 	<table  align="center" border="0" width="950" cellspacing="0" >
 		<? include ("head.html") ?>
 		<tr >
 			<td background= "images/left.jpg"  id="contentcss" width="80%" >
