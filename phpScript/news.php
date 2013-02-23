@@ -173,34 +173,39 @@ if($dati[1] == "1" || $dati[1] == "01"){$months="января";}
                          
 						 
 						 <TABLE width="100%" cellpadding="0" cellspacing="0">
-						 <TR>
+						<!--TR>
 						 	<TD bgcolor="#DEDFEC" width="25%" height="20" class="menu"><font color=#336600>&nbsp;<?=$dati[2];?> <?=$months;?> <?=$dati[0];?></font></TD>
 						 	<TD bgcolor="#DEDFEC" <? if (strlen($title)>65) {?> class="menusmall" <?} else {?>class="menu"<?}?>><b><?=$title;?></b></TD>
+						 </TR-->
+						 <TR>
+						 	<!--TD bgcolor="#DEDFEC" width="25%" height="20" class="menu"><font color=#336600>&nbsp;<?=$dati[2];?> <?=$months;?> <?=$dati[0];?></font></TD-->
+						 	<TD valign="top" <? if (strlen($title)>65) {?> class="menusmall" <?} else {?>class="menu"<?}?>><b><?=$title;?></b></TD>
 						 </TR>
+						
 							<TR><!-- <a class="menusmall2" href="<? rewr_url();?>"><FONT COLOR="#330099">Подробнее&nbsp;&raquo</a> -->
-						 		<TD  colspan="2" class="menusmall">&nbsp;&nbsp;<?=$name;?><BR>
-								<a class="menusmall2" href="?cont=long&id=<?=$idnum;?>&year=<?=$dati[0];?>&today=<?=$dati[2];?>&month=<?=$dati[1];?>"><FONT COLOR="#330099">Подробнее&nbsp;&raquo</a></FONT></TD>
+						 		<TD valign="top" class="menusmall">&nbsp;<?=$name;?>
+								<a class="menusmall2" href="main.php/?cont=long&id=<?=$idnum;?>&year=<?=$dati[0];?>&today=<?=$dati[2];?>&month=<?=$dati[1];?>"><FONT COLOR="#330099">Подробнее&nbsp;&raquo</a></FONT></TD>
 							</TR>
+						 <TR><TD><hr></td></tr>
 						 </TABLE>
-					
-						    						   
-                        
+
                         <? }
                    else { $nd=date('Y' ); ?>
                         
 						<TABLE width="100%" cellpadding="0" cellspacing="0" >
-						 <TR>
-						 	<TD bgcolor="#DEDFEC" width="25%" height="20" class="menu"><font color=#336600>&nbsp;<?=$dati[2];?> <?=$months;?> <?=$dati[0];?></font></TD>
-                               <TD bgcolor="#DEDFEC" <? if (strlen($title)>65) {?> class="menusmall" <?} else {?>class="menu"<?}?>><b><?=$title;?></b></TD>
-							   </TR>
-								 <TR>
-						 			<TD  colspan="2" valign="top" class="menusmall">&nbsp;&nbsp;<?=$content;?></TD>
+						<TR>
+						 	<!--TD bgcolor="#DEDFEC" width="25%" height="20" class="menu"><font color=#336600>&nbsp;<?=$dati[2];?> <?=$months;?> <?=$dati[0];?></font></TD-->
+                            <TD  valign="top" <? if (strlen($title)>65) {?> class="menusmall" <?} else {?>class="menu"<?}?>><b><?=$title;?></b></TD>
+						</TR>						
+						<TR>
+						 	<TD valign="top" class="menusmall">&nbsp;<?=$content;?></TD>
 						 </TR>
-						 </TABLE>
-                       <? }
+						  <TR><TD><hr></td></tr>
+						</TABLE>
+					              <? }
                 ?>
  <!-- <hr color=#BECCDE> -->               
-<BR>
+
 
 
 <?
@@ -243,8 +248,8 @@ elseif(isset($cont) && $cont=="long" && isset($id))
     ?>
       <TABLE width="100%" cellpadding="0" cellspacing="0">
 						 <TR>
-						 	<TD bgcolor="#DEDFEC" width="25%" height="20" class="menu"><font color=#336600>&nbsp;<?=$datun[2]?> <?=$month?> <?=$datun[0]?></font></TD>
-						 	<TD bgcolor="#DEDFEC" <? if (strlen($title)>70) {?> class="menusmall" <?} else {?>class="menu"<?}?>><b><?=$title;?></b></TD>
+						 	<!--TD bgcolor="#DEDFEC" width="25%" height="20" class="menu"><font color=#336600>&nbsp;<?=$datun[2]?> <?=$month?> <?=$datun[0]?></font></TD-->
+						 	<TD <? if (strlen($title)>70) {?> class="menusmall" <?} else {?>class="menu"<?}?>><h1><b><?=$title;?></b></h1></TD>
 						 </TR>
 							<TR>
 						 		<TD  colspan="2" class="menusmall" >&nbsp;&nbsp;<?=$content?></TD>
@@ -253,7 +258,7 @@ elseif(isset($cont) && $cont=="long" && isset($id))
          
          
     
-     <BR><P>
+    <P>
      <?
     /*
       //links creator
