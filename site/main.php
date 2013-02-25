@@ -9,7 +9,7 @@
 	<? include ("head.html") ?>
 		<tr>
 			<td background= "images/left.jpg" id="contentcss" width="80%" >
-				<h1>&nbsp;НОВОСТИ	</h1>
+				<h1>&nbsp; НОВОСТИ	</h1>
 			</td>
 			<? include ("baner.html") ?>
 		</tr>

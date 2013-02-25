@@ -1,0 +1,174 @@
+
+<html>
+<head>
+
+<script type="text/javascript">
+<!--
+var now = new Date;
+
+var month_name = [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль" , "Август", "Сентябрь", "Октябрь", "Ноябрь" ,"Декабрь" ];
+
+function getObj(objID)
+{
+    if (document.getElementById) {return document.getElementById(objID);}
+    else if (document.all) {return document.all[objID];}
+    else if (document.layers) {return document.layers[objID];}
+}
+
+function get_start_day()
+{
+	now.setDate(1);
+	var ret = now.getDay();
+	if (ret == 0) ret = 7;
+	return ret;
+}
+function get_end_day ()
+{
+	var month_n = now.getMonth();
+	var year_n = now.getFullYear();
+	if (month_n == 1) {	if (year_n % 4) return 28;	else return 29; }
+	if (month_n < 7)
+	{	 if (month_n % 2){return 30;} else {	return 31;}	}
+	else if (month_n % 2) {	return 31;} else { return 30;}	
+}
+function redraw()
+{
+	var j = 0;
+	var start = get_start_day();
+	var finish = get_end_day();
+	for (var i = 1; i < start; ++i) 
+		getObj(i).innerHTML = "";
+		
+	for (var i = start; i < 43; ++i) 
+	{	++j;
+		if (( j > 0)&& (j <= finish)) getObj(i).innerHTML = j;
+		else getObj(i).innerHTML = "";
+	}
+	getObj("month").innerHTML = month_name [now.getMonth()] +" "+ String(now.getFullYear()) ;
+}
+function month(a)
+{	var month_n = now.getMonth();
+	var year_n = now.getFullYear();
+	month_n +=a;
+
+	if (month_n < 0) month_n = 11, --year_n;
+	if (month_n > 11) month_n = 0, ++year_n;
+
+	now.setMonth(month_n);
+	now.setFullYear(year_n);
+	redraw();
+}
+function today()
+{
+	var t = new Date;
+	now = t;
+
+	redraw();
+}
+-->
+</script>
+
+</head>
+<body>
+
+<table class=calend border=0 cellpadding=4 cellspacing=1 width=170 valign="middle" align="center">
+	<tr>
+		<td >
+			<a href="#" onclick="month(-1);">&laquo;&laquo;</a>
+		</td>
+		<td colspan="5" >
+			<b id="month">Февраль</b>
+		</td>
+		<td >
+			<a href="#" onclick="month(1);" >&raquo;&raquo;</a>
+		</td>
+	</tr>
+	<tr  >	<!-- //выводим дни недели -->
+		<td >
+			<b>Пн</b>
+		</td>
+		<td  >
+			<b>Вт</b>
+		</td>
+		<td >
+			<b>Ср</b>
+		</td>
+		<td >
+			<b>Чт</b>
+		</td>
+		<td >
+			<b>Пт</b>
+		</td>
+		<td >
+			<b><font color=#C05643>Сб</font></b>
+		</td>
+		<td >
+			<b><font color=#C05643>Вс</font></b>
+		</td>
+	</tr>
+	<tr class="point_empty">	<!-- //выводим пустые дни месяца как пробелы -->
+		<td id="1" >&nbsp;</td>
+		<td id="2">&nbsp;</td>
+		<td id="3">&nbsp;</td>
+		<td id="4">&nbsp;</td>
+								<!-- //выводим дни месяца -->
+		<td id="5">	1	</td>
+  		<td id="6">	2	</td>
+  		<td id="7">	3       </td>
+	</tr>
+	<tr>
+		<td id="8">	4       </td>
+		<td id="9">	5       </td>
+  		<td id="10">	6       </td>
+  		<td id="11">	7       </td>
+  		<td id="12">	8       </td>
+  		<td id="13">	9       </td>
+  		<td id="14">	10       </td>
+    </tr>
+	<tr>
+		<td id="15">	11       </td>
+		<td id="16">	12       </td>
+		<td id="17">	13       </td>
+  		<td id="18">	14       </td>
+  		<td id="19">	15       </td>
+  		<td id="20">	16       </td>
+  		<td id="21">	17       </td>
+    </tr>
+	<tr>
+		<td id="22">	18       </td>
+ 		<td id="23">	19       </td>
+  		<td id="24">	20       </td>
+  		<td id="25">	21       </td>
+  		<td id="26">	22       </td>
+		<td id="27"><a href="#">23</a></td>	   
+  		<td id="28">	24       </td>
+    </tr>
+	<tr>
+		<td id="29"><a href="#">25</a></td> 
+		<td id="30">	26       </td>
+  		<td id="31">	27       </td>
+  		<td id="32">	28       </td>
+		<!--- Оставшиеся пустые дни-->
+		<td id="33" >&nbsp;</td>
+		<td id="34">&nbsp;</td>
+		<td id="35">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="36"><a href="#"></a></td> 
+		<td id="37">	       </td>
+  		<td id="38">	       </td>
+  		<td id="39">	      </td>
+		<!--- Оставшиеся пустые дни-->
+		<td id="40" >&nbsp;</td>
+		<td id="41">&nbsp;</td>
+		<td id="42">&nbsp;</td>
+	</tr>
+<!-- //выводим сегодняшнюю дату с ссылкой -->
+	<tr bgcolor=#E7EBEF class=today_link>
+		<td colspan="7">
+			<a href="#" onclick="today();"><div>Сегодня: 25 Февраля 2013 </div></a>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
