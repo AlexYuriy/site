@@ -1,0 +1,34 @@
+
+.days
+{
+vertical-align: middle;
+TEXT-ALIGN: center;
+color: #FFFFFF;
+BACKGROUND-COLOR: #028AC8;
+text-decoration: none;
+}
+
+.days a
+{
+color: #FFFFFF;
+BACKGROUND-COLOR: #055A81;
+text-decoration: none;
+}
+
+.calend {
+font-size: 10pt;
+font-family : Verdana;
+color: #005080;
+text-decoration: none;
+border: 0 ;
+width: 170px ;
+BACKGROUND-COLOR: #E7EBEF;
+}
+
+.today_link a, .today_link a:visited, .today_link a:active
+{
+font-size: 10pt;
+font-family : Verdana;
+text-decoration: none;
+BACKGROUND-COLOR: #E7EBEF;
+}
