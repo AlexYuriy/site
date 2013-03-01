@@ -3,9 +3,9 @@
 
 <table class="calend" align="center" cellpadding="4" cellspacing="1" >
 	<tr>
-		<td ><a href="#" onclick="month(-1);">&laquo;&laquo;</a></td>
-		<td colspan="5" ><center><b id="month">Февраль</b></center></td>
-		<td><a href="#" onclick="month(1);" >&raquo;&raquo;</a></td>
+		<td><a id="back" href="#" onclick="month(-1)" return false;>&laquo;&laquo;</a></td>
+		<td colspan="5"><center><b id="month">Февраль</b></center></td>
+		<td><a id="forward" href="#" onclick="month(1); return false;">&raquo;&raquo;</a></td>
 	</tr>
 	<tr>	<!-- //выводим дни недели -->
 		<td><b>Пн</b></td>
@@ -16,55 +16,53 @@
 		<td><b><font color=#C05643>Сб</font></b></td>
 		<td><b><font color=#C05643>Вс</font></b></td>
 	</tr>
-	<tr class=days>	<!-- //выводим пустые дни месяца как пробелы -->
+	<tr class=days>	 
 		<td id="1"></td>
 		<td id="2"></td>
 		<td id="3"></td>
 		<td id="4"></td>
-								<!-- //выводим дни месяца -->
-		<td id="5">1</td>
-  		<td id="6">2</td>
-  		<td id="7">3</td>
+		<td id="5"></td>
+  		<td id="6"></td>
+  		<td id="7"></td>
 	</tr>
 	<tr class=days>
-		<td id="8">4</td>
-		<td id="9">5</td>
-  		<td id="10"> 6 </td>
-  		<td id="11">7 </td>
-  		<td id="12">8 </td>
-  		<td id="13">9 </td>
-  		<td id="14">10 </td>
+		<td id="8"></td>
+		<td id="9"></td>
+  		<td id="10"></td>
+  		<td id="11"></td>
+  		<td id="12"></td>
+  		<td id="13"></td>
+  		<td id="14"></td>
     </tr>
 	<tr class=days>
-		<td id="15">11 </td>
-		<td id="16">12 </td>
-		<td id="17">13 </td>
-  		<td id="18">14 </td>
-  		<td id="19">15 </td>
-  		<td id="20">16 </td>
-  		<td id="21">17 </td>
+		<td id="15"></td>
+		<td id="16"></td>
+		<td id="17"></td>
+  		<td id="18"></td>
+  		<td id="19"></td>
+  		<td id="20"></td>
+  		<td id="21"></td>
     </tr>
 	<tr class=days>
-		<td id="22">18 </td>
- 		<td id="23">19 </td>
-  		<td id="24">20 </td>
-  		<td id="25">21 </td>
-  		<td id="26">22 </td>
-		<td id="27"><a href="#">23</a></td>	   
-  		<td id="28">24 </td>
+		<td id="22"></td>
+ 		<td id="23"></td>
+  		<td id="24"></td>
+  		<td id="25"></td>
+  		<td id="26"></td>
+		<td id="27"></td>	   
+  		<td id="28"></td>
     </tr>
 	<tr class=days id="pre_last_week">
-		<td id="29"><a href="#">25</a></td> 
-		<td id="30">26</td>
-  		<td id="31">27</td>
-  		<td id="32">28</td>
-		<!--- Оставшиеся пустые дни-->
+		<td id="29"></td> 
+		<td id="30"></td>
+  		<td id="31"></td>
+  		<td id="32"></td>
 		<td id="33"></td>
 		<td id="34"></td>
 		<td id="35"></td>
 	</tr>
 	<tr class=days id="last_week">
-		<td id="36"><a href="#"></a></td> 
+		<td id="36"></td> 
 		<td id="37"></td>
   		<td id="38"></td>
   		<td id="39"></td>
@@ -74,31 +72,31 @@
 	</tr>
 	<tr class=today_link>
 		<td colspan="7">
-			<a href="#" onclick="today();">Сегодня: 25 Февраля 2013 </a>
+			<a href="http://istochnik-spb.com/main.php" onclick="today(); return false;">Сегодня: 25 Февраля 2013 </a>
 		</td>
 	</tr>
 </table>
 
 
 <script type="text/javascript">
-const now = new Date("2013.2");
-const good_Date =  [ 23, 	25, 	13, 	3] ;
-const good_Month = [ 2, 	2, 		1, 		3];
-const good_Year =  [ 2013, 	2013, 	2012, 	2013];
+var good_Date =  [ 23, 	25, 	13, 	3] ;
+var good_Month = [ 2, 	2, 		1, 		3];
+var good_Year =  [ 2013, 	2013, 	2012, 	2013];
 
-const color_no = "028AC8" ;
-const color_yes = "055A81" ;
-const color_free = "929493" ;
+var color_no = "028AC8" ;
+var color_yes = "055A81" ;
+var color_free = "929493" ;
+
+var now = new Date("2013.2");
 
 function today()
 {
 	now.setYear(2013);
 	now.setMonth(1);
-	
 	redraw();
 }
 
 redraw();
-	
+
 </script>
 

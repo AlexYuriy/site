@@ -1,5 +1,7 @@
-﻿ 
-  
+﻿<style type="text/css">
+      <? include "./phpScript/css/style.css" ?>
+  </style>
+
 	  <?
 
 $now_month = date("n",time());
@@ -138,13 +140,13 @@ for ($zz = 1; $zz <= $numdays; $zz++) {
 		  		if(($zz == $today)&&($now_year==$year)&&($now_month==$month) ) {?>
 		  <td id="point_today" class=menusmall>
 		  <!--a class=menusmall3 href="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a-->
-          <a class=menusmall3 href="main.php?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a> 
+          <a class=menusmall3 href="<?="main.php";?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a> 
 		   <?}
           else {if(($news_rows >0)||(($zz == $today)&&($now_year==$year)&&($now_month==$month))) {
 		  ?>
 		  <td id="point_true" class=menusmall>
 		  <!--a class=menusmall3 href="<?=$_SERVER['PHP_SELF'];?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a-->
-          <a class=menusmall3 href="main.php?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a> 
+          <a class=menusmall3 href="<?="main.php";?>?year=<?=$year;?>&today=<?=$zz;?>&month=<?=$month;?>"><?=$zz;?></a> 
 		   <?}
           else {
 		 ?>

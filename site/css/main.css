@@ -1,12 +1,20 @@
+body
+{
+background: #E8F6F9;
+}
+#active a
+{
+	color: red;
+}
 #logo
 {
+
 	position: relative;
 	left: 5px;
 	text-align: left;
 	
 }
 #topmenucss {
-background: url("/images/logo_top.jpg") ;
 font-size: 15pt;
 font-family : Verdana;
 color: #015885;
@@ -19,28 +27,24 @@ text-decoration: none;
 }
 
 
-#mainmenucss {
-height: 170px;
-width: 100%;
+
+.mainmenucss, .mainmenucss li 
+{
+display: inline;
 color: #070707;
  padding: 15px;
 font-size: 23px;
-font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-family : Verdana;
 }
-
-#mainmenucss a:link
+.mainmenucss a:link, .mainmenucss a:visited
 {
-color: #070707;
 text-decoration: none;
-
-}
-
-#mainmenucss a:visited 
-{
 color: #070707;
-
 }
-
+.mainmenucss a:hover
+{
+color: red;
+}
 
 	
 #contentcss , #contentcss a, #contentcss p {
@@ -57,28 +61,19 @@ text-align: right;
 font-size: 12pt;
 font-family : Verdana;
 color: #005880;
+position: static;
 } 
 
 #baner , #baner p {
-
+text-align: left;
 font-size: 12pt;
 font-family : Verdana;
 color: #005880;
 position: static;
 }
 
-.switchcontent 
-{
-	padding-left: 15px;
-}
 
-#copyright p
-{
-text-align: center;
-font-size: 12pt;
-font-family : Verdana;
-color: #070707;
-}
+
 /*
 .menusmall3 td{
     font-size : 8pt;
