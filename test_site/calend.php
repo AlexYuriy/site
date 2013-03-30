@@ -4,10 +4,30 @@
 if($PHP_SELF == ""){ $PHP_SELF = $HTTP_SERVER_VARS["PHP_SELF"]; }
 
 include("admin/config.inf");
-mysql_connect ($dbhostname , $dbusername , $dbpassword);
-mysql_select_db($database);
+$link = mysql_connect ($dbhostname , $dbusername , $dbpassword);
+if ( (!$link) || (!mysql_select_db($database) ) ) 
+{
+    die('Ошибка соединения: ' . mysql_error());
+}
+///Саша написал ->>
+	$res = mysql_query("select datum from ".$table_dnp_news."");
+	$num_rows = mysql_num_rows($res);
 
+	$value = mysql_result($res,0);
+	$good_Year = substr($value, 0, 4) ;
+	$good_Month= substr($value, 5, 2) ;
+	$good_Date = substr($value, 8, 2) ;	
+	
+	for($i=1; $i < $num_rows; ++$i)
+	{
+		$value = mysql_result($res,$i);
+		$good_Year .= ", " . substr($value, 0, 4) ;
+		$good_Month.= ", " . substr($value, 5, 2) ;
+		$good_Date .= ", " . substr($value, 8, 2) ;
+	}
 
+/// <<- Саша написал 
+mysql_close($link);
 
 //очистка от гамна
 if (isset($_GET['month'])) {
@@ -28,17 +48,9 @@ if (isset($_GET['year'])) {
    if ($year > 2035) { $year = 2035; }
    }
 
-if (isset($_GET['today'])) {
-   $today = $_GET['today'];
-   $today = ereg_replace ("[[:space:]]", "", $today);
-   $today = ereg_replace ("[[:punct:]]", "", $today);
-   $today = ereg_replace ("[[:alpha:]]", "", $today);
-   
-   }
  
 $month = (isset($month)) ? $month : date("n",time());
 $year  = (isset($year)) ? $year : date("Y",time());
-$today = (isset($today))? $today : date("j", time());
 $dayone    = date("w",mktime(1,1,1,$month,1,$year)); //день недели цифрой
 	if ($dayone ==0) {$dayone = 7;} 
 $numdays   = date("t",mktime(1,1,1,$month,1,$year)); //количество дней в месяце
@@ -48,23 +60,61 @@ $last_year = $year - 1;
 $next_month = $month + 1;
 $last_month = $month - 1;
 
-if ($today > $numdays) { $today = $numdays; }
 $month_ru = array ('','Январ','Феврал','Март','Апрел','Ма','Июн','Июл','Август','Сентябр','Октябр','Ноябр','Декабр');
 $im_p = array ('','ь','ь','','ь','й','ь','ь','','ь','ь','ь','ь');
 $r_p = array ('','я','я','а','я','я','я','я','а','я','я','я','я');
 $space = "&nbsp;";
 
+$today_day	= date("j",time()) ;
+$today_month= date("n",time()) ;
+$today_year	= date("Y",time()) ;
+
+function is_tomonth()
+{
+	global $today_month, $month, $today_year, $year;
+	if ( ($today_month == $month) && ($today_year == $year) ) return true; else return false; 
+}
+
+
+function is_today($str)
+{
+	global $today_day;
+	if (( $today_day == $str) && is_tomonth() ) return true; else return false; 
+}
+
+function busy_day($str)
+{
+	global $good_Year, $good_Month, $good_Date, $num_rows, $year, $month;
+	
+	for($i=0; $i < $num_rows; ++$i)
+	{
+		$Years[$i] = substr($good_Year, $i*6,4) ;
+		$Months[$i]= substr($good_Month,$i*4,2) ;
+		$Dates[$i] = substr($good_Date, $i*4,2) ;	
+
+	}
+	for($i=0; $i < $num_rows; ++$i)
+		{
+			echo $Years[$i], "=$year, ";
+			echo $Months[$i], "=$month, ";
+			echo  $Dates[$i], "=$str, \n";
+
+			if (( strcmp( $Years[$i], $year) ==0 ) && ( strcmp( $Months[$i], $month) ==0 ) && ( strcmp( $Dates[$i], $str) ==0 )) 
+				return true;
+		}
+	return false; 
+}
 
 ?>
 
-<link rel="stylesheet" href="calend.css" type="text/css">
-<script type="text/javascript" src="calend.js"></script>
+<link rel="stylesheet" href="css/calend.css" type="text/css">
+<script type="text/javascript" src="js/calend.js"></script>
 
 <table class="calend" align="center" cellpadding="4" cellspacing="1" >
 	<tr>
-		<td><a id="back" href="<?=$PHP_SELF;?>?year=<?=$year?>&today=<?=0;?>&month=<?=$last_month;?>" onclick="month(-1); return false;">&laquo;&laquo;</a></td>
+		<td><a id="back" href="<?=$PHP_SELF;?>?year=<?=$year?>&month=<?=$last_month;?>" onclick="month(-1); return false;">&laquo;&laquo;</a></td>
 		<td colspan="5"><center><b id="month"><? echo $month_ru[$month], $im_p[$month];?></b></center></td>
-		<td><a id="forward" href="<?=$PHP_SELF;?>?year=<?=$year;?>&today=<?=0;?>&month=<?=$next_month;?>" onclick="month(1); return false;">&raquo;&raquo;</a></td>
+		<td><a id="forward" href="<?=$PHP_SELF;?>?year=<?=$year;?>&month=<?=$next_month;?>" onclick="month(1); return false;">&raquo;&raquo;</a></td>
 	</tr>
 	<tr>	<!-- //выводим дни недели -->
 		<td><b>Пн</b></td>
@@ -76,50 +126,55 @@ $space = "&nbsp;";
 		<td><b><font color=#C05643>Вс</font></b></td>
 	</tr>
 	<tr class=days>	 
-	
 	<?
 		$j = 1-$dayone;
 		for ($i = 1; $i < 43; ++$i) 
-			{
+		{
 				++$j;
-				echo '<td id="', $i;  
-				if (($j <= $numdays)&&( $j > 0 )) { echo '">', $j, '</td>' ;} else { echo '" class=free_day></td>'; }  
+				echo "\n",'		<td id="', $i;  
+				$context = " $j ";
+				if (busy_day($j) ) $context = "<a href=$news_page?year=$year&today=$j&month=$month > $context </a>" ;
+				if (($j <= $numdays)&&( $j > 0 )) 
+				{ 
+					if (is_today($j)) echo '" class=today>'; 
+						else echo '">' ;
+					echo $context, '</td>' ;
+				} 
+					else {?>" class=free_day></td><?}  
 				if (($i<42)&&( $i % 7 == 0) )
 				{
-					if ($i>34) 		{?></tr><tr class=days id="last_week"><?} 
-					elseif ($i>27) 	{?></tr><tr class=days id="pre_last_week"><?}  
-						else  		{?></tr><tr class=days><?}
+					if ($i>34) 			{ echo "\n	</tr>\n", '	<tr class=days id="last_week"> ';} 
+						elseif ($i>27)	{ echo "\n	</tr>\n", '	<tr class=days id="pre_last_week">';}  
+							else  		{ echo "\n	</tr>\n", '	<tr class=days>';}
 				}
-			}
+		}
 	?>
+	
 	</tr>
 	<tr class=today_link>
 		<td colspan="7">
-			<a href="<?=$PHP_SELF;?>" onclick="today(); return false;">Сегодня: <? echo date("j",time()),' ' ,$month_ru[date("n",time())], $r_p[date("n",time())],' ' ,date("Y",time()) ;?> </a>
+			<a href="<?=$PHP_SELF;?>" onclick="today(); return false;">Сегодня:  <? echo $today_day ,' ' ,$month_ru[ $today_month ], $r_p[ $today_month ],' ' , $today_year ;?> </a>
 		</td>
 	</tr>
 </table>
 
 
 <script type="text/javascript">
-var good_Date =  [ 23, 	25, 	13, 	3] ;
-var good_Month = [ 2, 	2, 		1, 		3];
-var good_Year =  [ 2013, 	2013, 	2012, 	2013];
+<!--
+var good_Date =  [<?=$good_Date?>] ;
+var good_Month = [<?=$good_Month?>] ;
+var good_Year =  [<?=$good_Year?>] ;
 
-var color_no = "028AC8" ;
-var color_yes = "055A81" ;
-var color_free = "929493" ;
-
-var now = new Date();
+var now = new Date(<?echo $month-1,".$year"?>);
 
 function today()
 {
-	now.setYear(<?=date("Y",time());?>);
-	now.setMonth(<?=date("F",mktime(1,1,1,$month,$today,$year));?>);
+	now.setYear(<?=$today_year?>);
+	now.setMonth(<?=$today_month-1?>);
 	redraw();
 }
 
 redraw();
-
+-->
 </script>
 
