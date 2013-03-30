@@ -7,10 +7,7 @@
 $now_month = date("n",time());
 $now_year  = date("Y",time());
 $now_today = date("j", time());
-
-
 include("admin/config.inf");
-/*
 if ($HTTP_COOKIE_VARS)  {extract($HTTP_COOKIE_VARS, EXTR_SKIP);}
 //if ($_FILES)  {extract($_FILES, EXTR_SKIP);}
 if ($_COOKIE)           {extract($_COOKIE, EXTR_SKIP);}
@@ -20,14 +17,9 @@ if ($HTTP_GET_VARS)     {extract($HTTP_GET_VARS, EXTR_SKIP);}
 if ($_GET)              {extract($_GET, EXTR_SKIP);}
 if ($HTTP_ENV_VARS)     {extract($HTTP_ENV_VARS, EXTR_SKIP);}
 if ($_ENV)              {extract($_ENV, EXTR_SKIP);}
-*/
 if($PHP_SELF == ""){ $PHP_SELF = $HTTP_SERVER_VARS["PHP_SELF"]; }
 mysql_connect ($dbhostname , $dbusername , $dbpassword);
 mysql_select_db($database);
-
-
-
-
 
 //очистка от гамна
 if (isset($_GET['month'])) {
@@ -132,8 +124,7 @@ for ($i = 0; $i < ($dayone-1); $i++) {?>
 <!-- //выводим дни месяца -->
 <?
 for ($zz = 1; $zz <= $numdays; $zz++) {
-  if ($i >= 7) { ?>
-  </tr><tr><? $i=0; }
+  if ($i >= 7) { ?> </tr><tr><? $i=0; }
 			
           $news_date = $year."-".$month."-".$zz;
           $news_result = mysql_query("select * from ".$table_dnp_news." where datum = '".$news_date."'");// and act_status!='on'");
@@ -181,13 +172,10 @@ if($now_month == "1" ){$now_month_ru="Января";}
     elseif($now_month == "10"){$now_month_ru="Октября";}
     elseif($now_month == "11"){$now_month_ru="Ноября";}
     elseif($now_month == "12"){$now_month_ru="Декабря";}
-
-
 ?>
 
 </tr>
 </table>
-
 <!-- //выводим сегодняшнюю дату с ссылкой -->
 <table border=0 cellpadding=4 cellspacing=1 width=170>
 <tr bgcolor=#E7EBEF class=menusmall3>
@@ -198,6 +186,3 @@ if($now_month == "1" ){$now_month_ru="Января";}
 	   <A class="smallnews" HREF="<?=$pach_name;?>/admin" target="_blank">Добавить новость</A><?} else {} ?> 
 	   </td>
 </tr></table>
-
-
-

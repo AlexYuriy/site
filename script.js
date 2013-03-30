@@ -4,8 +4,8 @@
 * Visit http://www.dynamicdrive.com/ for full source code
 ***********************************************/
 
-var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
-var collapseprevious="no" //Collapse previously open content when opening present? (yes/no)
+var enablepersist="off" //Enable saving state of content structure using session cookies? (on/off)
+var collapseprevious="yes" //Collapse previously open content when opening present? (yes/no)
 
 if (document.getElementById){
 document.write('<style type="text/css">')
