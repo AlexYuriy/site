@@ -1,22 +1,23 @@
 
-<html><head>
-<? include ("meta.html") ?>
+<html >
+<head>
+<? include ("service/0_meta.php") ?>
  <title>Главная </title>
  </head>
  
  <body>
  	<table  align="center" border="0" width="950" cellspacing="0" >
-	<? include ("head.html") ?>
+	<? include ("service/0_head.php") ?>
 		<tr>
 			<td background= "images/left.jpg" id="contentcss" width="80%" >
-				<h1>&nbsp; НОВОСТИ	</h1>
+				<h1>&nbsp;НОВОСТИ	</h1>
 			</td>
-			<? include ("baner.html") ?>
+			<? include ("service/0_baner.php") ?>
 		</tr>
 		<tr valign="top">
 			<td><? include("./phpScript/news.php"); ?></td>
-			<? include ("calend.php") ?>
+			<? include ("service/0_calend.php") ?>
 		</tr>
 	</table>
-	<? include ("down.php") ?>
+	<? include ("service/0_down.php") ?>
 </body></html>	

@@ -19,7 +19,7 @@ text-decoration: none;
 	COLOR: #002244;
 	LINE-HEIGHT: 14px;
 	FONT-FAMILY: verdana, arial, helvetica, sans serif;
-	TEXT-DECORATION: none;
+	TEXT-DECORATION: none
 }
 
 .menusmall3 td{
@@ -39,7 +39,7 @@ text-decoration: none;
 	COLOR: #002244;
 	LINE-HEIGHT: 14px;
 	FONT-FAMILY: verdana, arial, helvetica, sans serif;
-	TEXT-DECORATION: none;
+	TEXT-DECORATION: none
 }
 .smallnews:hover {
 	FONT-WEIGHT: 300;
@@ -47,7 +47,7 @@ text-decoration: none;
 	COLOR: #3300CC;
 	LINE-HEIGHT: 14px;
 	FONT-FAMILY: verdana, arial, helvetica, sans serif;
-	TEXT-DECORATION: none;
+	TEXT-DECORATION: none
 }
 
 #form    {BACKGROUND-COLOR: #003366;
@@ -59,13 +59,6 @@ text-decoration: none;
 	border-color:black;
 	}
 
-#point_today, #point_today a{
-vertical-align: middle;
-TEXT-ALIGN: center;
-color: #FFFFFF;
-BACKGROUND-COLOR: #25AFEA;
-text-decoration: none;	
-}	
 
 #point_true , #point_true  a{
 vertical-align: middle;
@@ -79,12 +72,15 @@ text-decoration: none;
 vertical-align: middle;
 TEXT-ALIGN: center;
 color: #FFFFFF;
-BACKGROUND-COLOR: #028AC8;
+BACKGROUND-COLOR: #028AC8
 }
-
-
 #point_empty{
 vertical-align: middle;
 TEXT-ALIGN: center;
-BACKGROUND-COLOR: #FEFEFE;	
+BACKGROUND-COLOR: #FEFEFE	
+}
+#point_today{
+vertical-align: middle;
+TEXT-ALIGN: center;
+BACKGROUND-COLOR: #000000	
 }

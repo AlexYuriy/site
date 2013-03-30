@@ -1,0 +1,33 @@
+Array ( 
+[UNIQUE_ID] 			=> US9nTk3qyOgAACpgxS8AAAAn 
+[HTTP_HOST] 			=> istochnik-spb.com 
+[HTTP_CONNECTION] 		=> keep-alive 
+[HTTP_CACHE_CONTROL] 	=> max-age=0 
+[HTTP_ACCEPT] 			=> text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8 
+[HTTP_USER_AGENT] 		=> Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.97 Safari/537.22 
+[HTTP_REFERER] 			=> http://istochnik-spb.com/site/department.php 
+[HTTP_ACCEPT_ENCODING] 	=> gzip,deflate,sdch 
+[HTTP_ACCEPT_LANGUAGE] 	=> ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4 
+[HTTP_ACCEPT_CHARSET] 	=> windows-1251,utf-8;q=0.7,*;q=0.3 
+[HTTP_COOKIE] 			=> /site/department.phpfirsttimeload=0; /site/department.php=sc1|sc3|; /services.phpfirsttimeload=0; /services.php= 
+[PATH] 					=> /sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/root/bin 
+[SERVER_SIGNATURE] 		=> 
+[SERVER_SOFTWARE] 		=> Apache/2.2.22 (FreeBSD) mod_python/3.3.1 Python/2.7.2 mod_wsgi/2.8 PHP/5.2.17 mod_ssl/2.2.22 OpenSSL/0.9.8q DAV/2 
+[SERVER_NAME] 			=> istochnik-spb.com 
+[SERVER_ADDR] 			=> 77.234.200.232 
+[SERVER_PORT] 			=> 80 
+[REMOTE_ADDR] 			=> 88.201.205.187 
+[DOCUMENT_ROOT] 		=> /home/host1245282/istochnik-spb.ru/htdocs/www/ 
+[SERVER_ADMIN] 			=> you@example.com 
+[SCRIPT_FILENAME] 		=> /home/host1245282/istochnik-spb.ru/htdocs/www/site/main.php 
+[REMOTE_PORT] 			=> 50737 
+[GATEWAY_INTERFACE] 	=> CGI/1.1 
+[SERVER_PROTOCOL] 		=> HTTP/1.1 
+[REQUEST_METHOD] 		=> GET 
+[QUERY_STRING] 			=> 
+[REQUEST_URI] 			=> /site/main.php 
+[SCRIPT_NAME] 			=> /site/main.php 
+[PHP_SELF] 				=> /site/main.php 
+[REQUEST_TIME] 			=> 1362061134 
+[argv] 					=> Array ( ) 
+[argc] 					=> 0 )

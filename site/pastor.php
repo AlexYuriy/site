@@ -1,19 +1,19 @@
 
 <html><head>
-<? include ("meta.html") ?>
+<? include ("service/0_meta.php") ?>
  <title> Пастор </title>
  </head>
  
  <body>
  	<table  align="center" border="0" width="950" cellspacing="0" >
-	<? include ("head.html") ?>
+	<? include ("service/0_head.php") ?>
 		<tr>
 			<td background= "images/left.jpg" id="contentcss" width="80%" >
 				<h1>О пасторе</h1>
 
 
 			</td>
-			<? include ("baner.html") ?>
+			<? include ("service/0_baner.php") ?>
 		</tr>
 		<tr valign="top">
 			<td>
@@ -26,10 +26,10 @@
 				В 1989 - Господь призвал его в Санкт-Петербург(Ленинград), где пастор Михаил основал церковь "Источник Жизни". На сегодняшний церковь насчитывает около 800 прихожан.</p>
 			
 			</a></td>
-			<? include ("calend.php") ?>
+			<? include ("service/0_calend.php") ?>
 		</tr>
 		
 	</table>
 			
-	<? include ("down.php") ?>
+	<? include ("service/0_down.php") ?>
 </body></html>	

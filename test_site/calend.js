@@ -1,6 +1,6 @@
+var base_url = "http://istochnik-spb.com/main.php?year=";
 
-
-const month_name = [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль" , "Август", "Сентябрь", "Октябрь", "Ноябрь" ,"Декабрь" ];
+var month_name = [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль" , "Август", "Сентябрь", "Октябрь", "Ноябрь" ,"Декабрь" ];
 
 function getObj(objID)
 {
@@ -61,7 +61,7 @@ function redraw()
 			}
 			else 
 			{
-				Obj_id.innerHTML = "<a href=http://istochnik-spb.com/main.php?year="+ year_n + "&today=" + date_n + "&month=" + month_n+">" + String( date_n ) + "</a>";		
+				Obj_id.innerHTML = "<a href="+ base_url + year_n + "&today=" + date_n + "&month=" + month_n+">" + String( date_n ) + "</a>";		
 				Obj_id.bgColor = color_yes;
 			}
 				 
@@ -78,6 +78,8 @@ function redraw()
 		}
 	}
 	getObj("month").innerHTML = month_name [now.getMonth()] +" "+ String(now.getFullYear()) ;
+	getObj("back").href = base_url + String(now.getYear()+1900) + "&today=0&month=" + String(now.getMonth());	
+	getObj("forward").href = base_url + String(now.getYear()+1900) + "&today=0&month=" + String(now.getMonth()+2);
 }
 function month(a)
 {	
