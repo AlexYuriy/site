@@ -3,9 +3,9 @@
 
 <table class="calend" align="center" cellpadding="4" cellspacing="1" >
 	<tr>
-		<td><a id="back" href="#" onclick="month(-1)" return false;>&laquo;&laquo;</a></td>
+		<td><a id="back" href="calend.html?year=<?=$year?>&today=<?=0;?>&month=<?=$last_month;?>" onclick="month(-1); return false;">&laquo;&laquo;</a></td>
 		<td colspan="5"><center><b id="month">Февраль</b></center></td>
-		<td><a id="forward" href="#" onclick="month(1); return false;">&raquo;&raquo;</a></td>
+		<td><a id="forward" href="calend.html?year=<?=$year;?>&today=<?=0;?>&month=<?=$next_month;?>" onclick="month(1); return false;">&raquo;&raquo;</a></td>
 	</tr>
 	<tr>	<!-- //выводим дни недели -->
 		<td><b>Пн</b></td>
@@ -87,7 +87,7 @@ var color_no = "028AC8" ;
 var color_yes = "055A81" ;
 var color_free = "929493" ;
 
-var now = new Date("2013.2");
+var now = new Date("Saturday, February 9, 2008");
 
 function today()
 {

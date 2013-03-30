@@ -3,7 +3,7 @@ $host = $_SERVER[SCRIPT_NAME];
 ?>
 		<tr height= "190px" id="topmenucss" >
 				<td  background="images/logo_top.jpg" colspan = "3"  valign = "bottom" >
-				<a href="main.php"><img src="images/transparent.png" height="150" width="450"></a>
+				<a href="main.php"><img src="images/transparent.png" height="150" width="450" border="0"></a>
 				 &nbsp; 
 				<div align="right">
 					<a href="video.php">прямая трансляция </a>

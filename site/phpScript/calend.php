@@ -10,6 +10,7 @@ $now_today = date("j", time());
 
 
 include("admin/config.inf");
+/*
 if ($HTTP_COOKIE_VARS)  {extract($HTTP_COOKIE_VARS, EXTR_SKIP);}
 //if ($_FILES)  {extract($_FILES, EXTR_SKIP);}
 if ($_COOKIE)           {extract($_COOKIE, EXTR_SKIP);}
@@ -19,7 +20,7 @@ if ($HTTP_GET_VARS)     {extract($HTTP_GET_VARS, EXTR_SKIP);}
 if ($_GET)              {extract($_GET, EXTR_SKIP);}
 if ($HTTP_ENV_VARS)     {extract($HTTP_ENV_VARS, EXTR_SKIP);}
 if ($_ENV)              {extract($_ENV, EXTR_SKIP);}
-
+*/
 if($PHP_SELF == ""){ $PHP_SELF = $HTTP_SERVER_VARS["PHP_SELF"]; }
 mysql_connect ($dbhostname , $dbusername , $dbpassword);
 mysql_select_db($database);
