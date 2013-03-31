@@ -1,7 +1,6 @@
-
+<!DOCTYPE html>
 <html><head>
- <? include ("service/0_meta.php") ?>
- <script type="text/javascript" src="js/script.js"></script>
+ <? include ("service/0_meta.php") ?> <script type="text/javascript" src="js/script.js"></script>
  <title> Служения </title>
  </head>
  
@@ -16,6 +15,7 @@
 		</tr>
 		<tr valign="top">
 			<td id="contentcss">
+				<p>
 				<h3 onclick="expandcontent('sc1')" style="cursor:hand; cursor:pointer">Молитвенное</h3>
 				<div id="sc1" class="switchcontent">Руководитель молитвенного служения Куга Любовь +7(921)317-55-96 </div>
 					<hr color=#A78717>
@@ -64,6 +64,7 @@
 					<li id="sc10" class="switchcontent">Детское</li>
 					<li id="sc11" class="switchcontent">Вспоможение</li>
 				</ul>  -->
+				</p>
 			</td>
 			<? include ("service/0_calend.php") ?>
 		</tr>

@@ -6,7 +6,7 @@ $host = $_SERVER[SCRIPT_NAME];
 				<a href="main.php"><img src="images/transparent.png" height="150" width="450" border="0"></a>
 				 &nbsp; 
 				<div align="right">
-					<a href="video.php">прямая трансляция </a>
+					<a href="video.php" <? if ( strrpos ($host , "video.php"  ) ) {echo 'class="active" ';}?> >прямая трансляция </a>
 					&nbsp; | &nbsp; 				
 					<a href=" fghfghfg"> english </a>
 					&nbsp; 

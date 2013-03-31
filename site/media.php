@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html><head>
 <? include ("service/0_meta.php") ?>
  <title>Медиа </title>

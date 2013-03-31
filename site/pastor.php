@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html><head>
 <? include ("service/0_meta.php") ?>
  <title> Пастор </title>
@@ -9,7 +9,7 @@
 	<? include ("service/0_head.php") ?>
 		<tr>
 			<td background= "images/left.jpg" id="contentcss" >
-				<h1>О пасторе</h1>
+				<h1>&nbsp; О пасторе</h1>
 
 
 			</td>

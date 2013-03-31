@@ -1,10 +1,13 @@
 #logo
 {
-
 	position: relative;
 	left: 5px;
-	text-align: left;
-	
+	text-align: left;	
+}
+
+#topmenucss div 
+{
+	padding: 5px;
 }
 #topmenucss {
 font-size: 15pt;
@@ -18,15 +21,16 @@ color: #43859D;
 text-decoration: none;
 }
 
-#mainmenucss li , .mainmenucss ul 
+#mainmenucss li ,  #mainmenucss ul
 {
+margin: 0px;
 display: inline;
 padding: 5px;
-
 }
 
 #mainmenucss td
 {
+
 color: #070707;
 font-size: 23px;
 font-family : Verdana;
@@ -38,16 +42,15 @@ padding: 15px;
 text-decoration: none;
 color: #070707;
 }
-#mainmenucss a:hover
+#mainmenucss a:hover, #mainmenucss a.active, #topmenucss a.active  
 {
 color: red;
 }
 
-#mainmenucss a.active 
+#contentcss h1
 {
-	color: red;
+margin: 0px;
 }
-
 	
 #contentcss , #contentcss a, #contentcss p {
 
@@ -61,7 +64,6 @@ text-decoration: none;
 .switchcontent
 {
 BACKGROUND-color: #E7E7E7;
-width: 99%;
 padding-left: 10px;
 }
 
@@ -73,8 +75,12 @@ font-family : Verdana;
 color: #005880;
 position: static;
 } 
-
+#baner td
+{
+width: 20%;
+}
 #baner , #baner p {
+margin: 0px;
 padding-left: 5px;
 text-align: left;
 font-size: 12pt;
