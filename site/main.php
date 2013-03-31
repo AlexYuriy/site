@@ -9,13 +9,15 @@
  	<table  align="center" border="0" width="950" cellspacing="0" >
 	<? include ("service/0_head.php") ?>
 		<tr>
-			<td background= "images/left.jpg" id="contentcss" >
+			<td background= "images/left.jpg" class="contentcss" >
 				<h1>&nbsp;НОВОСТИ	</h1>
 			</td>
 			<? include ("service/0_baner.php") ?>
 		</tr>
 		<tr valign="top">
-			<td><? include("./phpScript/news.php"); ?></td>
+			<td class="contentcss" >
+				<? include("./phpScript/news.php"); ?>
+			</td>
 			<? include ("service/0_calend.php") ?>
 		</tr>
 	</table>

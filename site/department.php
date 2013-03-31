@@ -8,13 +8,13 @@
  	<table  align="center" border="0" width="950" cellspacing="0" >
 		<? include ("service/0_head.php") ?>
 		<tr>
-			<td background= "images/left.jpg" id="contentcss"  >
+			<td background= "images/left.jpg" class="contentcss"  >
 				<h1>&nbsp; СЛУЖЕНИЯ	</h1>
 			</td>
 			<? include ("service/0_baner.php") ?>
 		</tr>
 		<tr valign="top">
-			<td id="contentcss">
+			<td class="contentcss">
 				<p>
 				<h3 onclick="expandcontent('sc1')" style="cursor:hand; cursor:pointer">Молитвенное</h3>
 				<div id="sc1" class="switchcontent">Руководитель молитвенного служения Куга Любовь +7(921)317-55-96 </div>

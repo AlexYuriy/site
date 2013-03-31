@@ -14,8 +14,8 @@ $host = $_SERVER[SCRIPT_NAME];
 			</td>
 		</tr>
 
-		<tr height="230px" id="mainmenucss" >
-			<td valign = "top" background="images/logo_center.jpg" colspan="3">
+		<tr  id="mainmenucss" >
+			<td  valign = "top" background="images/logo_center.jpg" colspan="3">
 				<ul>
 				<li><a href="main.php" 		<? if ( strrpos ($host , "main.php"  ) 		) {echo 'class="active" ';}?> >главная	</a>&nbsp; </li>
 				<li><a href="about.php" 	<? if ( strrpos ($host , "about.php" )  	) {echo 'class="active" ';}?> >о церкви	</a>&nbsp; </li>
