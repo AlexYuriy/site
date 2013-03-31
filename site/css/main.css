@@ -72,7 +72,12 @@ color: #005880;
 position: static;
 }
 
-
+#down_baner {
+text-align: right;
+font-size: 14pt;
+font-family : Verdana;
+color: #005880;
+}
 
 /*
 .menusmall3 td{

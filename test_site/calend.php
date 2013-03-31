@@ -85,6 +85,9 @@ function is_today($str)
 function busy_day($str)
 {
 	global $good_Year, $good_Month, $good_Date, $num_rows, $year, $month;
+	$month_str = str_pad($month, 2, '0', STR_PAD_LEFT);
+	$day_str = str_pad($str, 2, '0', STR_PAD_LEFT);
+	$year_str = str_pad($year, 4, '0', STR_PAD_LEFT);
 	
 	for($i=0; $i < $num_rows; ++$i)
 	{
@@ -95,11 +98,7 @@ function busy_day($str)
 	}
 	for($i=0; $i < $num_rows; ++$i)
 		{
-			echo $Years[$i], "=$year, ";
-			echo $Months[$i], "=$month, ";
-			echo  $Dates[$i], "=$str, \n";
-
-			if (( strcmp( $Years[$i], $year) ==0 ) && ( strcmp( $Months[$i], $month) ==0 ) && ( strcmp( $Dates[$i], $str) ==0 )) 
+			if (( strcmp( $Years[$i], $year_str) ==0 ) && ( strcmp( $Months[$i], $month_str) ==0 ) && ( strcmp( $Dates[$i], $day_str) ==0 )) 
 				return true;
 		}
 	return false; 
@@ -136,7 +135,7 @@ function busy_day($str)
 				if (busy_day($j) ) $context = "<a href=$news_page?year=$year&today=$j&month=$month > $context </a>" ;
 				if (($j <= $numdays)&&( $j > 0 )) 
 				{ 
-					if (is_today($j)) echo '" class=today>'; 
+					if (is_today($j)) echo '" bgcolor=#05CA81>'; 
 						else echo '">' ;
 					echo $context, '</td>' ;
 				} 
@@ -165,7 +164,7 @@ var good_Date =  [<?=$good_Date?>] ;
 var good_Month = [<?=$good_Month?>] ;
 var good_Year =  [<?=$good_Year?>] ;
 
-var now = new Date(<?echo $month-1,".$year"?>);
+var now = new Date(<?echo "$year, ", $month-1?>, 15);
 
 function today()
 {

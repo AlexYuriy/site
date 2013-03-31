@@ -8,6 +8,9 @@ $database = "host1245282_phpScript";
 //Имя папки скрипта
 $pach_name = "phpScript";
 
+//Страница с новостями. Для вставки в ссылку. 
+$news_page = "main.php";
+
 // каталог для хранения картинок
 $news_dir = "phpScript/img/";            // каталог для картинок в новостях
 
