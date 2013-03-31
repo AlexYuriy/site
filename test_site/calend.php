@@ -111,9 +111,9 @@ function busy_day($str)
 
 <table class="calend" align="center" cellpadding="4" cellspacing="1" >
 	<tr>
-		<td><a id="back" href="<?=$PHP_SELF;?>?year=<?=$year?>&month=<?=$last_month;?>" onclick="month(-1); return false;">&laquo;&laquo;</a></td>
+		<td id="back"><a href="<?=$PHP_SELF;?>?year=<?=$year?>&month=<?=$last_month;?>" onclick="month(-1); return false;">&laquo;&laquo;</a></td>
 		<td colspan="5"><center><b id="month"><? echo $month_ru[$month], $im_p[$month];?></b></center></td>
-		<td><a id="forward" href="<?=$PHP_SELF;?>?year=<?=$year;?>&month=<?=$next_month;?>" onclick="month(1); return false;">&raquo;&raquo;</a></td>
+		<td id="forward"><a href="<?=$PHP_SELF;?>?year=<?=$year;?>&month=<?=$next_month;?>" onclick="month(1); return false;">&raquo;&raquo;</a></td>
 	</tr>
 	<tr>	<!-- //выводим дни недели -->
 		<td><b>Пн</b></td>
@@ -124,8 +124,7 @@ function busy_day($str)
 		<td><b><font color=#C05643>Сб</font></b></td>
 		<td><b><font color=#C05643>Вс</font></b></td>
 	</tr>
-	<tr class=days>	 
-	<?
+	<tr class=days>	<?
 		$j = 1-$dayone;
 		for ($i = 1; $i < 43; ++$i) 
 		{

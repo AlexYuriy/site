@@ -48,3 +48,22 @@ BACKGROUND-COLOR: #E7EBEF;
 {
 BACKGROUND-COLOR: #05CA81;
 }
+
+
+
+.menu {
+font-size: 13pt;
+font-family : Verdana;
+padding-left: 10px;
+color: #005080;
+text-decoration: none;
+}
+
+.menusmall, .menusmall a {
+font-size: 12pt;
+font-family : Verdana;
+padding-left: 1px;
+color: #005080;
+text-decoration: none;
+}
+

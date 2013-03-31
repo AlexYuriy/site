@@ -1,1 +1,1 @@
-<p class="baner" align="center">Template by MLP</p>
+<p class="baner" align="center">Created by MLP</p>

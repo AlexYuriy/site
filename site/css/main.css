@@ -65,6 +65,7 @@ position: static;
 } 
 
 #baner , #baner p {
+padding-left: 5px;
 text-align: left;
 font-size: 12pt;
 font-family : Verdana;
@@ -78,58 +79,3 @@ font-size: 14pt;
 font-family : Verdana;
 color: #005880;
 }
-
-/*
-.menusmall3 td{
-    font-size : 8pt;
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	color : #333366;
-}
-
-.menusmall3 A {
-	text-decoration : none;
-	color : #000033;
-}
-
-.menusmall3 A:HOVER, A:FOCUS {
-	text-decoration : none;
-	color : #0000CC;
-}
-
-.menusmall td{
-    font-size : 8pt;
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	color : #333366;
-}
-
-
-
-.menusmall A:HOVER, A:FOCUS {
-	text-decoration : none;
-	color : #0000CC;
-}
-/*
-#content {
-	background: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
-	background-repeat: no-repeat;
-	padding-top: ;
-	padding-left: px;
-	float: left; /* Обтекание по правому краю 
-    width: 70%; /* Ширина левой колонки 
-    border-right: 4%; /* Линия справа 
-}
-#sidebar {
-	background: url(http://istochnik-spb.ru.host1245282.serv18.hostland.ru/templates/main/design/left.jpg);
-	background-repeat: no-repeat;
-	padding-top: ;
-    float: left; /* Обтекание по правому краю 
-    width: 26%; /* Ширина 
-	padding-left: 1%;
-	border-left: 4%;
-   /* Отступы вокруг текста 
-}
-#container {
-    width: 70%; /* Ширина макета 
-    margin: 0 auto; /* Выравниваем по центру 
-}
-*/
