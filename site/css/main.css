@@ -1,8 +1,3 @@
-
-#active a
-{
-	color: red;
-}
 #logo
 {
 
@@ -23,24 +18,34 @@ color: #43859D;
 text-decoration: none;
 }
 
-
-
-.mainmenucss, .mainmenucss li 
+#mainmenucss li , .mainmenucss ul 
 {
 display: inline;
+padding: 5px;
+
+}
+
+#mainmenucss td
+{
 color: #070707;
- padding: 15px;
 font-size: 23px;
 font-family : Verdana;
+padding: 15px;
 }
-.mainmenucss a:link, .mainmenucss a:visited
+
+#mainmenucss a:link, #mainmenucss a:visited
 {
 text-decoration: none;
 color: #070707;
 }
-.mainmenucss a:hover
+#mainmenucss a:hover
 {
 color: red;
+}
+
+#mainmenucss a.active 
+{
+	color: red;
 }
 
 	
@@ -52,6 +57,14 @@ padding-left: 10px;
 color: #005080;
 text-decoration: none;
 }
+
+.switchcontent
+{
+BACKGROUND-color: #E7E7E7;
+width: 99%;
+padding-left: 10px;
+}
+
 
 #baner a {
 text-align: right;
@@ -70,7 +83,7 @@ color: #005880;
 position: static;
 }
 
-#down_baner {
+#down_baner, #down_baner a {
 text-align: right;
 font-size: 14pt;
 font-family : Verdana;

@@ -14,15 +14,15 @@ $host = $_SERVER[SCRIPT_NAME];
 			</td>
 		</tr>
 
-		<tr height="230px" >
-			<td valign = "top" background="images/logo_center.jpg" colspan="3" class="mainmenucss" >
+		<tr height="230px" id="mainmenucss" >
+			<td valign = "top" background="images/logo_center.jpg" colspan="3">
 				<ul>
-				<li <? if ( strrpos ($host , "main.php"  	)  === false) {} else { ?> id="active" <?} ?> ><a href="main.php">главная</a>&nbsp;
-				<li <? if ( strrpos ($host , "about.php"  	)  === false) {} else { ?> id="active" <?} ?> ><a href="about.php">о церкви</a>&nbsp;
-				<li <? if ( strrpos ($host , "department.php")  === false) {} else { ?> id="active" <?} ?>  ><a href="department.php">служения</a>&nbsp;
-				<li <? if ( strrpos ($host , "pastor.php"  	)  === false) {} else { ?> id="active" <?} ?>  ><a href="pastor.php">пастор</a>&nbsp;
-				<li <? if ( strrpos ($host , "media.php"  	)  === false) {} else { ?> id="active" <?} ?>  ><a href="media.php">медиа</a>&nbsp;
-				<li <? if ( strrpos ($host , "contacts.php"  )  === false) {} else { ?> id="active" <?} ?>  ><a href="contacts.php">контакты</a>&nbsp;
+				<li><a href="main.php" 		<? if ( strrpos ($host , "main.php"  ) 		) {echo 'class="active" ';}?> >главная	</a>&nbsp; </li>
+				<li><a href="about.php" 	<? if ( strrpos ($host , "about.php" )  	) {echo 'class="active" ';}?> >о церкви	</a>&nbsp; </li>
+				<li><a href="department.php"<? if ( strrpos ($host , "department.php")  ) {echo 'class="active" ';}?> >служения	</a>&nbsp; </li>
+				<li><a href="pastor.php" 	<? if ( strrpos ($host , "pastor.php" )		) {echo 'class="active" ';}?> >пастор	</a>&nbsp; </li>
+				<li><a href="media.php" 	<? if ( strrpos ($host , "media.php" ) 		) {echo 'class="active" ';}?> >медиа	</a>&nbsp; </li>
+				<li><a href="contacts.php" 	<? if ( strrpos ($host , "contacts.php" )	) {echo 'class="active" ';}?> >контакты	</a>&nbsp; </li>
 				</ul>		
 			</td>
 		</tr>
