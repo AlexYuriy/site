@@ -15,6 +15,7 @@ BACKGROUND-COLOR: #055A81;
 text-decoration: none;
 }
 
+
 .calend {
 font-size: 10pt;
 font-family : Verdana;
@@ -25,7 +26,7 @@ width: 170px ;
 BACKGROUND-COLOR: #E7EBEF;
 }
 
- .today_link a, .today_link a:visited, .today_link a:active, #back a, #forward  a
+ tr.today_link a, tr.today_link a:visited, tr.today_link a:active, #back a, #forward  a
 {
 color: #005080;
 font-size: 10pt;
@@ -44,7 +45,7 @@ BACKGROUND-COLOR: #E7EBEF;
 }
 
 
-.today
+tr.today
 {
 BACKGROUND-COLOR: #05CA81;
 }

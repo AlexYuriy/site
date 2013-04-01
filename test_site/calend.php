@@ -126,21 +126,27 @@ function busy_day($str)
 	</tr>
 	<tr class=days>	<?
 		$j = 1-$dayone;
+		$invis_flag = false;
 		for ($i = 1; $i < 43; ++$i) 
 		{
 				++$j;
-				echo "\n",'		<td id="', $i;  
-				$context = " $j ";
-				if (busy_day($j) ) $context = "<a href=$news_page?year=$year&today=$j&month=$month > $context </a>" ;
+				echo "\n",'		<td id="', $i, '"';  
 				if (($j <= $numdays)&&( $j > 0 )) 
 				{ 
-					if (is_today($j)) echo '" bgcolor=#05CA81>'; 
-						else echo '">' ;
+					$context = " $j ";
+					if (busy_day($j) ) $context =" bgcolor=#055A81><a href=$news_page?year=$year&today=$j&month=$month > $context </a>" ;
+						else $context = ">$context";
+					if (is_today($j)) echo ' bgcolor=#05CA81'; 
+	
 					echo $context, '</td>' ;
+					$invis_flag = false;
 				} 
-					else {?>" class=free_day></td><?}  
+				elseif($invis_flag) echo ' bgcolor=#E7EBEF></td>';
+				else echo ' bgcolor=#929493></td>';  
+				
 				if (($i<42)&&( $i % 7 == 0) )
 				{
+					$invis_flag = true;
 					if ($i>34) 			{ echo "\n	</tr>\n", '	<tr class=days id="last_week"> ';} 
 						elseif ($i>27)	{ echo "\n	</tr>\n", '	<tr class=days id="pre_last_week">';}  
 							else  		{ echo "\n	</tr>\n", '	<tr class=days>';}

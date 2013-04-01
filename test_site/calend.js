@@ -48,8 +48,8 @@ function clear_calend(start)
 {
 	for (var i = 1; i < start; ++i) 
 		{
-			getObj(i).innerHTML = "";
 			getObj(i).bgColor = color_free;
+			getObj(i).innerHTML = "";
 		}
 
 }
@@ -75,13 +75,14 @@ function set_data(Obj_id, date_n)
 
 			if (flag == 0) 
 			{
-				Obj_id.innerHTML = date_n;	
 				Obj_id.bgColor = color_no;
+				Obj_id.innerHTML = date_n;	
 			}
 			else 
 			{
-				Obj_id.innerHTML = "<a href="+ base_url + year_n + "&today=" + date_n + "&month=" + month_n+">" + String( date_n ) + "</a>";		
 				Obj_id.bgColor = color_yes;
+				Obj_id.innerHTML = "<a href="+ base_url + year_n + "&today=" + date_n + "&month=" + month_n+">" + String( date_n ) + "</a>";		
+
 			}
 				
 			//is_today
