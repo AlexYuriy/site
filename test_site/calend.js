@@ -1,7 +1,7 @@
 var color_no   ="028AC8" ;
 var color_yes  ="055A81" ;
 var color_free ="929493" ;
-var color_today="05CA81";
+var color_today="F5CA81";
 
 var base_url = "http://istochnik-spb.com/main.php?year=";
 
@@ -70,7 +70,7 @@ function  get_flag(date_n, month_n , year_n)
 function set_data(Obj_id, date_n)
 {
 			var  month_n = now.getMonth() +1 ;
-			var  year_n = now.getYear() +1900;		
+			var  year_n = now.getFullYear() ;		
 			var flag = get_flag(date_n , month_n, year_n);
 
 			if (flag == 0) 
